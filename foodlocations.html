@@ -1,0 +1,307 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>MyCampusRating</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" /> 
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/logostar.png" alt="MyCampusRating Logo" /></span><span class="title">MyCampusRating</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="about us.html">Meet The Team</a></li>
+							<li><a href="">Make a Review</a></li>
+							
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Food Locations</h1>
+                            <p>Discover and see what people are saying about the diverse eating arrangements here at SUNY Albany.</p>
+							<span class="image main"><img src="" alt="" /></span>
+						</div>
+					</div>
+                
+                    <!-- Resturants -->
+
+                    <!-- 518 MARKET -->
+                    <div class="location-card">
+                        <div class="location-info">
+                            <h2>518 Market</h2>
+                            <p class="rating">Average Rating: x/5</p>
+                            <a href="" class="button">View Dining</a>
+                            <a href="#" class="button" onclick="showReviews('restaurant-1')">View Reviews</a>  
+                            <a href="#" class="button" onclick="showReviewForm('restaurant-1')">Leave Reviews</a>
+
+        </div>
+
+        <div class="review-form" id="review-form-restaurant-1" style="display: none;">
+
+            <input type="text" placeholder="Your Name" id="user-name-restaurant-1">
+
+            <textarea placeholder="Your Review" id="review-comment-restaurant-1"></textarea>
+
+            <input type="number" min="1" max="5" placeholder="Rating (1-5)" id="review-rating-restaurant-1">
+
+            <button onclick="submitReview('restaurant-1')">Submit Review</button>
+
+        </div>
+                    </div>
+                
+
+                    <!-- AL DENTE -->
+                    <div class="location-card">
+                        <div class="location-info">
+                            <h2>Al Dente</h2>
+                            <p class="rating">Average Rating: x/5</p>
+                            <a href="" class="button">View Dining</a>
+                            <a href="" class="button">View Reviews</a>
+                            <a href="" class="button">Leave Reviews</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                    <!-- CALYPSO -->
+                    <div class="location-card">
+                        <div class="location-info">
+                            <h2>Calypso</h2>
+                            <p class="rating">Average Rating: x/5</p>
+                            <a href="" class="button">View Dining</a>
+                            <a href="" class="button">View Reviews</a>
+                            <a href="" class="button">Leave Reviews</a>
+                        </div>
+                    </div>
+                
+
+                    <!-- CORNER DELI -->
+                    <div class="location-card">
+                        <div class="location-info">
+                            <h2>Corner Deli</h2>
+                            <p class="rating">Average Rating: x/5</p>
+                            <a href="" class="button">View Dining</a>
+                            <a href="" class="button">View Reviews</a>
+                            <a href="" class="button">Leave Reviews</a>
+                        </div>
+                    </div>
+               
+
+                    <!-- BABA'S -->
+                    <div class="location-card">
+                        <div class="location-info">
+                            <h2>Baba's Pizza</h2>
+                            <p class="rating">Average Rating: x/5</p>
+                            <a href="" class="button">View Dining</a>
+                            <a href="" class="button">View Reviews</a>
+                            <a href="" class="button">Leave Reviews</a>
+                        </div>
+                    </div>
+                
+
+                    <!-- FOUNTAIN GRILL -->
+                    <div class="location-card">
+                        <div class="location-info">
+                            <h2>Fountain Grill</h2>
+                            <p class="rating">Average Rating: x/5</p>
+                            <a href="" class="button">View Dining</a>
+                            <a href="" class="button">View Reviews</a>
+                            <a href="" class="button">Leave Reviews</a>
+                        </div>
+                    </div>
+
+                    <!-- NIKOS -->
+                    <div class="food-locations">
+                        <div class="location-card">
+                            <div class="location-info">
+                                <h2>NIKOS</h2>
+                                <p class="rating">Average Rating: 4/5</p>
+                                <a href="https://www.ualbanydining.com/dining-near-me/nikos-cafe" class="button">View Dining</a>
+                                <a href="" class="button">View Reviews</a>
+                                <a href="" class="button">Leave Reviews</a>
+                            </div>
+                        </div>
+                    <!-- UMAI SUSHI -->
+                        <div class="location-card">
+                            <div class="location-info">
+                                <h2>UMAI SUSHI</h2>
+                                <p class="rating">Average Rating: 3.7/5</p>
+                                <a href="https://www.ualbanydining.com/dining-near-me/umai-sushi" class="button">View Dining</a>
+                                <a href="" class="button">View Reviews</a>
+                                <a href="" class="button">Leave Reviews</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- STARBUCKS -->
+                    <div class="location-card">
+                        <div class="location-info">
+                            <h2>Starbucks</h2>
+                            <p class="rating">Average Rating: x/5</p>
+                            <a href="" class="button">View Dining</a>
+                            <a href="" class="button">View Reviews</a>
+                            <a href="" class="button">Leave Reviews</a>
+                        </div>
+                    </div>
+
+                    <!-- STOCKS AND STEMS -->
+                    <div class="location-card">
+                        <div class="location-info">
+                            <h2>Stocks and Stems</h2>
+                            <p class="rating">Average Rating: x/5</p>
+                            <a href="" class="button">View Dining</a>
+                            <a href="" class="button">View Reviews</a>
+                            <a href="" class="button">Leave Reviews</a>
+                        </div>
+                    </div>
+
+                    <!-- SUBCONNECTION -->
+                    <div class="location-card">
+                        <div class="location-info">
+                            <h2>Subconnection</h2>
+                            <p class="rating">Average Rating: x/5</p>
+                            <a href="" class="button">View Dining</a>
+                            <a href="" class="button">View Reviews</a>
+                            <a href="" class="button">Leave Reviews</a>
+                        </div>
+                    </div>
+
+                    <!-- HALAL SHACK -->
+                    <div class="location-card">
+                        <div class="location-info">
+                            <h2>Halal Shack</h2>
+                            <p class="rating">Average Rating: x/5</p>
+                            <a href="" class="button">View Dining</a>
+                            <a href="" class="button">View Reviews</a>
+                            <a href="" class="button">Leave Reviews</a>
+                        </div>
+                    </div>
+
+                    <!-- 1844 -->
+                    <div class="location-card">
+                        <div class="location-info">
+                            <h2>1844 Resturant</h2>
+                            <p class="rating">Average Rating: x/5</p>
+                            <a href="" class="button">View Dining</a>
+                            <a href="" class="button">View Reviews</a>
+                            <a href="" class="button">Leave Reviews</a>
+                        </div>
+                    </div>
+
+                    <!-- TRES HABANEROS -->
+                    <div class="location-card">
+                        <div class="location-info">
+                            <h2>Tres Habaneros</h2>
+                            <p class="rating">Average Rating: x/5</p>
+                            <a href="" class="button">View Dining</a>
+                            <a href="" class="button">View Reviews</a>
+                            <a href="" class="button">Leave Reviews</a>
+                        </div>
+                    </div>
+
+                    <!-- JAMALS -->
+                    <div class="location-card">
+                        <div class="location-info">
+                            <h2>Jamals</h2>
+                            <p class="rating">Average Rating: x/5</p>
+                            <a href="" class="button">View Dining</a>
+                            <a href="" class="button">View Reviews</a>
+                            <a href="" class="button">Leave Reviews</a>
+                        </div>
+                    </div>
+
+                    <!-- UMAI FUSHION -->
+                    <div class="location-card">
+                        <div class="location-info">
+                            <h2>Umai Fusion</h2>
+                            <p class="rating">Average Rating: x/5</p>
+                            <a href="" class="button">View Dining</a>
+                            <a href="" class="button">View Reviews</a>
+                            <a href="" class="button">Leave Reviews</a>
+                        </div>
+                    </div>
+
+                    <!-- FRESH FRUIT BAR -->
+                    <div class="location-card">
+                        <div class="location-info">
+                            <h2>Fresh Fruit Bar</h2>
+                            <p class="rating">Average Rating: x/5</p>
+                            <a href="" class="button">View Dining</a>
+                            <a href="" class="button">View Reviews</a>
+                            <a href="" class="button">Leave Reviews</a>
+                        </div>
+                    </div>
+
+                    <!-- SWEET SHOP -->
+                    <div class="location-card">
+                        <div class="location-info">
+                            <h2>Sweet Shop</h2>
+                            <p class="rating">Average Rating: x/5</p>
+                            <a href="" class="button">View Dining</a>
+                            <a href="" class="button">View Reviews</a>
+                            <a href="" class="button">Leave Reviews</a>
+                        </div>
+                    </div>
+
+                    <!-- EAST CAFE -->
+                    <div class="location-card">
+                        <div class="location-info">
+                            <h2>East Cafe</h2>
+                            <p class="rating">Average Rating: x/5</p>
+                            <a href="" class="button">View Dining</a>
+                            <a href="" class="button">View Reviews</a>
+                            <a href="" class="button">Leave Reviews</a>
+                        </div>
+                    </div>
+                    <!-- SPICE MARKET -->
+                    <div class="location-card">
+                        <div class="location-info">
+                            <h2>Spice Market</h2>
+                            <p class="rating">Average Rating: x/5</p>
+                            <a href="" class="button">View Dining</a>
+                            <a href="" class="button">View Reviews</a>
+                            <a href="" class="button">Leave Reviews</a>
+                        </div>
+                    </div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+
+            <script src="restaurants.js"></script>
+<script src="reviews.js"></script>
+<script src="submitReview.js"></script>
+<script src="showReviewForm.js"></script>
+
+	</body>
+</html>
