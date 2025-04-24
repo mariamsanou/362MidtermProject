@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>MyCampusRating</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+<body onload="loadInitialData()">
+
+    <div id="wrapper">
+        <header id="header">
+            <div class="inner">
+                <a href="index.html" class="logo">
+                    <span class="symbol"><img src="images/logostar.png" alt="MyCampusRating Logo" /></span>
+                    <span class="title">MyCampusRating</span>
+                </a>
+                <nav>
+                    <ul><li><a href="#menu">Menu</a></li></ul>
+                </nav>
+            </div>
+        </header>
+
+        <nav id="menu">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about_us.html">Meet The Team</a></li>
+                <li><a href="review.html">Make a Review</a></li>
+            </ul>
+        </nav>
+
+        <div id="main">
+            <div class="inner">
+                <h1>Study Locations</h1>
+                <p>Academic Weapon!</p>
+
+                <!-- Locations -->
+                <div class="location-card">
+                    <h2>Library</h2>
+                    <p id="rating-library">Average Rating: x/5</p>
+                    <a href="#" class="button" onclick="showReviews('library')">View Reviews</a>
+                    <a href="#" class="button" onclick="showReviewForm('library')">Leave Review</a>
+                    <div id="reviews-library"></div>
+                    <div id="review-form-library" style="display:none;">
+                        <input type="text" id="user-name-library" placeholder="Your name">
+                        <textarea id="review-comment-library" placeholder="Your comment"></textarea>
+                        <input type="number" id="review-rating-library" placeholder="Rating (1-5)">
+                        <button onclick="submitReview('library')">Submit</button>
+                        <button onclick="hideReviewForm('library')">Cancel</button>
+                    </div>
+                </div>
+
+                <div class="location-card">
+                    <h2>Science Library</h2>
+                    <p id="rating-science-library">Average Rating: x/5</p>
+                    <a href="#" class="button" onclick="showReviews('science-library')">View Reviews</a>
+                    <a href="#" class="button" onclick="showReviewForm('science-library')">Leave Review</a>
+                    <div id="reviews-science-library"></div>
+                    <div id="review-form-science-library" style="display:none;">
+                        <input type="text" id="user-name-science-library" placeholder="Your name">
+                        <textarea id="review-comment-science-library" placeholder="Your comment"></textarea>
+                        <input type="number" id="review-rating-science-library" placeholder="Rating (1-5)">
+                        <button onclick="submitReview('science-library')">Submit</button>
+                        <button onclick="hideReviewForm('science-library')">Cancel</button>
+                    </div>
+                </div>
+
+                <div class="location-card">
+                    <h2>ETEC</h2>
+                    <p id="rating-etec">Average Rating: x/5</p>
+                    <a href="#" class="button" onclick="showReviews('etec')">View Reviews</a>
+                    <a href="#" class="button" onclick="showReviewForm('etec')">Leave Review</a>
+                    <div id="reviews-etec"></div>
+                    <div id="review-form-etec" style="display:none;">
+                        <input type="text" id="user-name-etec" placeholder="Your name">
+                        <textarea id="review-comment-etec" placeholder="Your comment"></textarea>
+                        <input type="number" id="review-rating-etec" placeholder="Rating (1-5)">
+                        <button onclick="submitReview('etec')">Submit</button>
+                        <button onclick="hideReviewForm('etec')">Cancel</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/browser.min.js"></script>
+    <script src="js/breakpoints.min.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/healthReviews.js"></script>
+
+</body>
+</html>
