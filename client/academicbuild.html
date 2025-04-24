@@ -1,0 +1,296 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>MyCampusRating</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="css/main.css" /> 
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/logostar.png" alt="MyCampusRating Logo" /></span><span class="title">MyCampusRating</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="about_us.html">Meet The Team</a></li>
+							<li><a href="review.html">Make a Review</a></li>
+							
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Academic Buildings</h1>
+                            <p>I know they all look the same but it gets easier with time.</p>
+							<span class="image main"><img src="" alt="" /></span>
+						</div>
+					</div>
+                    <!-- Academic Buildings -->
+
+                    <!-- Humanities -->
+                    <div class="location-card">
+
+                <div class="location-card">
+                    <h2>Humanities</h2>
+                    <p id="rating-humanities">Average Rating: x/5</p>
+                    <a href="#" class="button" onclick="showReviews('humanities')">View Reviews</a>
+                    <a href="#" class="button" onclick="showReviewForm('humanities')">Leave Review</a>
+                    
+                    <div id="reviews-humanities"></div>
+                    
+                    <div id="review-form-humanities" style="display:none;">
+                        <input type="text" id="user-name-humanities" placeholder="Your name">
+                        <textarea id="review-comment-humanities" placeholder="Your comment"></textarea>
+                        <input type="number" id="review-rating-humanities" placeholder="Rating (1-5)" min="1" max="5">
+                        <button onclick="submitReview('humanities')">Submit</button>
+                        <button onclick="hideReviewForm('humanities')">Cancel</button>
+                    </div>
+                </div>
+                
+
+                <div class="location-card">
+                    <h2>Taconic</h2>
+                    <p id="rating-taconic">Average Rating: x/5</p>
+                    <a href="#" class="button" onclick="showReviews('taconic')">View Reviews</a>
+                    <a href="#" class="button" onclick="showReviewForm('taconic')">Leave Review</a>
+                    <div id="reviews-taconic"></div>
+                    <div id="review-form-taconic" style="display:none;">
+                        <input type="text" id="user-name-taconic" placeholder="Your name">
+                        <textarea id="review-comment-taconic" placeholder="Your comment"></textarea>
+                        <input type="number" id="review-rating-taconic" placeholder="Rating (1-5)" min="1" max="5">
+                        <button onclick="submitReview('taconic')">Submit</button>
+                        <button onclick="hideReviewForm('taconic')">Cancel</button>
+                    </div>
+                </div>
+        
+                <div class="location-card">
+                    <h2>Social Science</h2>
+                    <p id="rating-social-science">Average Rating: x/5</p>
+                    <a href="#" class="button" onclick="showReviews('social-science')">View Reviews</a>
+                    <a href="#" class="button" onclick="showReviewForm('social-science')">Leave Review</a>
+                    <div id="reviews-social-science"></div>
+
+            <div id="review-form-social-science" style="display:none;">
+                <input type="text" id="user-name-social-science" placeholder="Your name">
+                <textarea id="review-comment-social-science" placeholder="Your comment"></textarea>
+                <input type="number" id="review-rating-social-science" placeholder="Rating (1-5)" min="1" max="5">
+                <button onclick="submitReview('social-science')">Submit</button>
+                <button onclick="hideReviewForm('social-science')">Cancel</button>
+            </div>
+        </div>
+
+        <div class="location-card">
+            <h2>Catskill</h2>
+            <p id="rating-catskill">Average Rating: x/5</p>
+            <a href="#" class="button" onclick="showReviews('catskill')">View Reviews</a>
+            <a href="#" class="button" onclick="showReviewForm('catskill')">Leave Review</a>
+            <div id="reviews-catskill"></div>
+            <div id="review-form-catskill" style="display:none;">
+                <input type="text" id="user-name-catskill" placeholder="Your name">
+                <textarea id="review-comment-catskill" placeholder="Your comment"></textarea>
+                <input type="number" id="review-rating-catskill" placeholder="Rating (1-5)" min="1" max="5">
+                <button onclick="submitReview('catskill')">Submit</button>
+                <button onclick="hideReviewForm('catskill')">Cancel</button>
+            </div>
+        </div>
+
+        <div class="location-card">
+            <h2>Arts & Sciences</h2>
+            <p id="rating-arts-sciences">Average Rating: x/5</p>
+            <a href="#" class="button" onclick="showReviews('arts-sciences')">View Reviews</a>
+            <a href="#" class="button" onclick="showReviewForm('arts-sciences')">Leave Review</a>
+            <div id="reviews-arts-sciences"></div>
+            <div id="review-form-arts-sciences" style="display:none;">
+                <input type="text" id="user-name-arts-sciences" placeholder="Your name">
+                <textarea id="review-comment-arts-sciences" placeholder="Your comment"></textarea>
+                <input type="number" id="review-rating-arts-sciences" placeholder="Rating (1-5)" min="1" max="5">
+                <button onclick="submitReview('arts-sciences')">Submit</button>
+                <button onclick="hideReviewForm('arts-sciences')">Cancel</button>
+            </div>
+        </div>
+
+        <div class="location-card">
+            <h2>Fine Arts</h2>
+            <p id="rating-fine-arts">Average Rating: x/5</p>
+            <a href="#" class="button" onclick="showReviews('fine-arts')">View Reviews</a>
+            <a href="#" class="button" onclick="showReviewForm('fine-arts')">Leave Review</a>
+            <div id="reviews-fine-arts"></div>
+            <div id="review-form-fine-arts" style="display:none;">
+                <input type="text" id="user-name-fine-arts" placeholder="Your name">
+                <textarea id="review-comment-fine-arts" placeholder="Your comment"></textarea>
+                <input type="number" id="review-rating-fine-arts" placeholder="Rating (1-5)" min="1" max="5">
+                <button onclick="submitReview('fine-arts')">Submit</button>
+                <button onclick="hideReviewForm('fine-arts')">Cancel</button>
+            </div>
+        </div>
+
+        <div class="location-card">
+            <h2>Pine Bush</h2>
+            <p id="rating-pine-bush">Average Rating: 4/5</p>
+            <a href="#" class="button" onclick="showReviews('pine-bush')">View Reviews</a>
+            <a href="#" class="button" onclick="showReviewForm('pine-bush')">Leave Review</a>
+            <div id="reviews-pine-bush"></div>
+            <div id="review-form-pine-bush" style="display:none;">
+                <input type="text" id="user-name-pine-bush" placeholder="Your name">
+                <textarea id="review-comment-pine-bush" placeholder="Your comment"></textarea>
+                <input type="number" id="review-rating-pine-bush" placeholder="Rating (1-5)" min="1" max="5">
+                                <button onclick="submitReview('pine-bush')">Submit</button>
+                                <button onclick="hideReviewForm('pine-bush')">Cancel</button>
+                            </div>
+                        </div>
+                
+                        <div class="location-card">
+                            <h2>Biology</h2>
+                            <p id="rating-biology">Average Rating: 3.7/5</p>
+                            <a href="#" class="button" onclick="showReviews('biology')">View Reviews</a>
+                            <a href="#" class="button" onclick="showReviewForm('biology')">Leave Review</a>
+                            <div id="reviews-biology"></div>
+                            <div id="review-form-biology" style="display:none;">
+                                <input type="text" id="user-name-biology" placeholder="Your name">
+                                <textarea id="review-comment-biology" placeholder="Your comment"></textarea>
+                                <input type="number" id="review-rating-biology" placeholder="Rating (1-5)" min="1" max="5">
+                                <button onclick="submitReview('biology')">Submit</button>
+                                <button onclick="hideReviewForm('biology')">Cancel</button>
+                            </div>
+                        </div>
+                
+                        <div class="location-card">
+                            <h2>Performing Arts</h2>
+                            <p id="rating-performing-arts">Average Rating: x/5</p>
+                            <a href="#" class="button" onclick="showReviews('performing-arts')">View Reviews</a>
+                            <a href="#" class="button" onclick="showReviewForm('performing-arts')">Leave Review</a>
+                            <div id="reviews-performing-arts"></div>
+                            <div id="review-form-performing-arts" style="display:none;">
+                                <input type="text" id="user-name-performing-arts" placeholder="Your name">
+                                <textarea id="review-comment-performing-arts" placeholder="Your comment"></textarea>
+                                <input type="number" id="review-rating-performing-arts" placeholder="Rating (1-5)" min="1" max="5">
+                                <button onclick="submitReview('performing-arts')">Submit</button>
+                                <button onclick="hideReviewForm('performing-arts')">Cancel</button>
+                            </div>
+                        </div>
+                
+                        <div class="location-card">
+                            <h2>Chemistry</h2>
+                            <p id="rating-chemistry">Average Rating: x/5</p>
+                            <a href="#" class="button" onclick="showReviews('chemistry')">View Reviews</a>
+                            <a href="#" class="button" onclick="showReviewForm('chemistry')">Leave Review</a>
+                            <div id="reviews-chemistry"></div>
+                            <div id="review-form-chemistry" style="display:none;">
+                                <input type="text" id="user-name-chemistry" placeholder="Your name">
+                                <textarea id="review-comment-chemistry" placeholder="Your comment"></textarea>
+                                <input type="number" id="review-rating-chemistry" placeholder="Rating (1-5)" min="1" max="5">
+                                <button onclick="submitReview('chemistry')">Submit</button>
+                                <button onclick="hideReviewForm('chemistry')">Cancel</button>
+                            </div>
+                        </div>
+                
+                        <div class="location-card">
+                            <h2>Physics</h2>
+                            <p id="rating-physics">Average Rating: x/5</p>
+                            <a href="#" class="button" onclick="showReviews('physics')">View Reviews</a>
+                            <a href="#" class="button" onclick="showReviewForm('physics')">Leave Review</a>
+                            <div id="reviews-physics"></div>
+                            <div id="review-form-physics" style="display:none;">
+                                <input type="text" id="user-name-physics" placeholder="Your name">
+                                <textarea id="review-comment-physics" placeholder="Your comment"></textarea>
+                                <input type="number" id="review-rating-physics" placeholder="Rating (1-5)" min="1" max="5">
+                                <button onclick="submitReview('physics')">Submit</button>
+                                <button onclick="hideReviewForm('physics')">Cancel</button>
+                            </div>
+                        </div>
+                
+                        <div class="location-card">
+                            <h2>Physical Education</h2>
+                            <p id="rating-physical-education">Average Rating: x/5</p>
+                            <a href="#" class="button" onclick="showReviews('physical-education')">View Reviews</a>
+                            <a href="#" class="button" onclick="showReviewForm('physical-education')">Leave Review</a>
+            <div id="reviews-physical-education"></div>
+            <div id="review-form-physical-education" style="display:none;">
+                <input type="text" id="user-name-physical-education" placeholder="Your name">
+                <textarea id="review-comment-physical-education" placeholder="Your comment"></textarea>
+                <input type="number" id="review-rating-physical-education" placeholder="Rating (1-5)" min="1" max="5">
+                <button onclick="submitReview('physical-education')">Submit</button>
+                <button onclick="hideReviewForm('physical-education')">Cancel</button>
+            </div>
+        </div>
+
+        <div class="location-card">
+            <h2>Massary School of Business</h2>
+            <p id="rating-massary-school">Average Rating: x/5</p>
+            <a href="#" class="button" onclick="showReviews('massary-school')">View Reviews</a>
+            <a href="#" class="button" onclick="showReviewForm('massary-school')">Leave Review</a>
+            <div id="reviews-massary-school"></div>
+            <div id="review-form-massary-school" style="display:none;">
+                <input type="text" id="user-name-massary-school" placeholder="Your name">
+                <textarea id="review-comment-massary-school" placeholder="Your comment"></textarea>
+                <input type="number" id="review-rating-massary-school" placeholder="Rating (1-5)" min="1" max="5">
+                <button onclick="submitReview('massary-school')">Submit</button>
+                <button onclick="hideReviewForm('massary-school')">Cancel</button>
+            </div>
+        </div>
+
+        <div class="location-card">
+            <h2>Life Sciences</h2>
+            <p id="rating-life-sciences">Average Rating: x/5</p>
+            <a href="#" class="button" onclick="showReviews('life-sciences')">View Reviews</a>
+            <a href="#" class="button" onclick="showReviewForm('life-sciences')">Leave Review</a>
+            <div id="reviews-life-sciences"></div>
+            <div id="review-form-life-sciences" style="display:none;">
+                <input type="text" id="user-name-life-sciences" placeholder="Your name">
+                <textarea id="review-comment-life-sciences" placeholder="Your comment"></textarea>
+                <input type="number" id="review-rating-life-sciences" placeholder="Rating (1-5)" min="1" max="5">
+                <button onclick="submitReview('life-sciences')">Submit</button>
+                <button onclick="hideReviewForm('life-sciences')">Cancel</button>
+            </div>
+        </div>
+
+        <div class="location-card">
+            <h2>ETEC</h2>
+            <p id="rating-etec">Average Rating: x/5</p>
+            <a href="#" class="button" onclick="showReviews('etec')">View Reviews</a>
+            <a href="#" class="button" onclick="showReviewForm('etec')">Leave Review</a>
+            <div id="reviews-etec"></div>
+            <div id="review-form-etec" style="display:none;">
+                <input type="text" id="user-name-etec" placeholder="Your name">
+                <textarea id="review-comment-etec" placeholder="Your comment"></textarea>
+                <input type="number" id="review-rating-etec" placeholder="Rating (1-5)" min="1" max="5">
+                <button onclick="submitReview('etec')">Submit</button>
+                <button onclick="hideReviewForm('etec')">Cancel</button>
+            </div>
+        </div>
+
+    </div> <!-- End of wrapper -->
+
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/browser.min.js"></script>
+    <script src="js/breakpoints.min.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/acedemicsReview.js"></script>
+
+</body>
+</html>
