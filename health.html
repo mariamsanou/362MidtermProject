@@ -1,86 +1,88 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>MyCampusRating</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" /> 
-	</head>
-	<body class="is-preload">
-		<!-- Wrapper -->
-			<div id="wrapper">
+<head>
+    <title>MyCampusRating</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+<body onload="loadInitialData()">
 
-				<!-- Header -->
-					<header id="header">
-						<div class="inner">
+<div id="wrapper">
+    <!-- Header -->
+    <header id="header">
+        <div class="inner">
+            <a href="index.html" class="logo">
+                <span class="symbol"><img src="images/logostar.png" alt="MyCampusRating Logo" /></span>
+                <span class="title">MyCampusRating</span>
+            </a>
+            <nav>
+                <ul><li><a href="#menu">Menu</a></li></ul>
+            </nav>
+        </div>
+    </header>
 
-							<!-- Logo -->
-								<a href="index.html" class="logo">
-									<span class="symbol"><img src="images/logostar.png" alt="MyCampusRating Logo" /></span><span class="title">MyCampusRating</span>
-								</a>
+    <!-- Menu -->
+    <nav id="menu">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about_us.html">Meet The Team</a></li>
+            <li><a href="review.html">Make a Review</a></li>
+        </ul>
+    </nav>
 
-							<!-- Nav -->
-								<nav>
-									<ul>
-										<li><a href="#menu">Menu</a></li>
-									</ul>
-								</nav>
+    <!-- Main Content -->
+    <div id="main">
+        <div class="inner">
+            <h1>Health Locations</h1>
+            <p>This one is for the Health!</p>
 
-						</div>
-					</header>
+            <!-- Broadview Center -->
+            <div class="location-card">
+                <h2>Broadview Center</h2>
+                <p id="rating-health-center-1">Average Rating: No reviews</p>
+                <a href="#" class="button" onclick="showReviews('health-center-1')">View Reviews</a>
+                <a href="#" class="button" onclick="showReviewForm('health-center-1')">Leave Review</a>
 
-				<!-- Menu -->
-					<nav id="menu">
-						<h2>Menu</h2>
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="about us.html">Meet The Team</a></li>
-							<li><a href="">Make a Review</a></li>
-							
-						</ul>
-					</nav>
+                <div id="reviews-health-center-1"></div>
+                <div class="review-form" id="review-form-health-center-1" style="display:none;">
+                    <input type="text" id="user-name-health-center-1" placeholder="Your name">
+                    <textarea id="review-comment-health-center-1" placeholder="Your comment"></textarea>
+                    <input type="number" min="1" max="5" id="review-rating-health-center-1" placeholder="Rating (1-5)">
+                    <button onclick="submitReview('health-center-1')">Submit</button>
+                    <button onclick="hideReviewForm('health-center-1')">Cancel</button>
+                </div>
+            </div>
 
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
-							<h1>Event Locations</h1>
-                            <p>This one is for the clubs!</p>
-							<span class="image main"><img src="" alt="" /></span>
-						</div>
-					</div>
-                    <!-- Gyms -->
+            <!-- The Well on Colonial -->
+            <div class="location-card">
+                <h2>The Well on Colonial</h2>
+                <p id="rating-health-center-2">Average Rating: No reviews</p>
+                <a href="#" class="button" onclick="showReviews('health-center-2')">View Reviews</a>
+                <a href="#" class="button" onclick="showReviewForm('health-center-2')">Leave Review</a>
 
-                    <!-- Broadview Center -->
-                    <div class="location-card">
-                        <div class="location-info">
-                            <h2>Broadview Center</h2>
-                            <p class="rating">Average Rating: x/5</p>
-                            <a href="" class="button">View Reviews</a>
-                            <a href="" class="button">Leave Reviews</a>
-                        </div>
-                    </div>
-                
+                <div id="reviews-health-center-2"></div>
+                <div class="review-form" id="review-form-health-center-2" style="display:none;">
+                    <input type="text" id="user-name-health-center-2" placeholder="Your name">
+                    <textarea id="review-comment-health-center-2" placeholder="Your comment"></textarea>
+                    <input type="number" min="1" max="5" id="review-rating-health-center-2" placeholder="Rating (1-5)">
+                    <button onclick="submitReview('health-center-2')">Submit</button>
+                    <button onclick="hideReviewForm('health-center-2')">Cancel</button>
+                </div>
+            </div>
 
-                    <!-- The Well on Colonial -->
-                    <div class="location-card">
-                        <div class="location-info">
-                            <h2>The Well on Colonial</h2>
-                            <p class="rating">Average Rating: x/5</p>
-                            <a href="" class="button">View Reviews</a>
-                            <a href="" class="button">Leave Reviews</a>
-                        </div>
-                    </div>
+        </div>
+    </div>
+</div>
 
-                
+<!-- Scripts -->
+<script src="js/jquery.min.js"></script>
+<script src="js/browser.min.js"></script>
+<script src="js/breakpoints.min.js"></script>
+<script src="js/util.js"></script>
+<script src="js/main.js"></script>
+<script src="js/healthReviews.js"></script>
 
-
-    
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+</body>
 </html>

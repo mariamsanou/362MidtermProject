@@ -1,10 +1,3 @@
-//
-//  submitReview.js
-//  
-//
-//  Created by W. Mariam Sanou on 4/21/25.
-//
-
 // submitReview.js
 
 function submitReview(restaurantId) {
