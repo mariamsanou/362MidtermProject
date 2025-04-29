@@ -5,6 +5,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" /> 
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 	</head>
 	<body class="is-preload">
 		<!-- Wrapper -->
@@ -48,63 +49,125 @@
 							<span class="image main"><img src="" alt="" /></span>
 						</div>
 					</div>
+
                     <!-- Bathrooms -->
+            <div class="container swiper">
+                <div class="card-wrapper">
 
                     <!-- Campus Center First Floor -->
-                    <div class="location-card">
-                        <div class="location-info">
-                            <h2>Campus Center First Floor</h2>
-                            <p class="rating">Average Rating: x/5</p>
-                            <a href="" class="button">View Reviews</a>
-                            <a href="" class="button">Leave Reviews</a>
-                        </div>
-                    </div>
+                    <ul class="card-list swiper-wrapper">
+                        <li class="card-item swiper-slide">
+                            <div class="location-card">
+                                <div class="location-info">
+                                    <h2>Campus Center First Floor</h2>
+                                    <p class="rating">Average Rating: x/5</p>
+                                    <a href="#" class="button" onclick="showReviews('restaurant-1')">View Reviews</a>
+                                    <a href="#" class="button" onclick="showReviewForm('restaurant-1')">Leave Reviews</a>
+                                </div>
+                            </div>
+                    <!-- js -->
+                            <div class="review-form" id="review-form-restaurant-1" style="display: none;">
+                                <input type="text" placeholder="Your Name" id="user-name-restaurant-1" />
+
+                                <textarea placeholder="Your Review" id="review-comment-restaurant-1"></textarea>
+
+                                <input type="number" min="1" max="5" placeholder="Rating (1-5)" id="review-rating-restaurant-1" />
+
+                                <button onclick="submitReview('restaurant-1')">Submit Review</button>
+                            </div>
+                        </li>
+
+                        <!-- Campus Center Second Floor -->
+                        <li class="card-item swiper-slide">
+                            <div class="location-card">
+                                <div class="location-info">
+                                    <h2>Campus Center Second Floor</h2>
+                                    <p class="rating">Average Rating: x/5</p>
+                                    <a href="#" class="button" onclick="showReviews('restaurant-2')">View Reviews</a>
+                                    <a href="#" class="button" onclick="showReviewForm('restaurant-2')">Leave Reviews</a>
+                                </div>
+                            </div>
+                    <!-- js -->
+                            <div class="review-form" id="review-form-restaurant-2" style="display: none;">
+                                <input type="text" placeholder="Your Name" id="user-name-restaurant-2" />
+
+                                <textarea placeholder="Your Review" id="review-comment-restaurant-2"></textarea>
+
+                                <input type="number" min="1" max="5" placeholder="Rating (1-5)" id="review-rating-restaurant-2" />
+
+                                <button onclick="submitReview('restaurant-2')">Submit Review</button>
+                            </div>
+                        </li>
+
+						<!-- ETEC -->
+                        <li class="card-item swiper-slide">
+                            <div class="location-card">
+                                <div class="location-info">
+                                    <h2>ETEC</h2>
+                                    <p class="rating">Average Rating: x/5</p>
+                                    <a href="#" class="button" onclick="showReviews('restaurant-2')">View Reviews</a>
+                                    <a href="#" class="button" onclick="showReviewForm('restaurant-2')">Leave Reviews</a>
+                                </div>
+                            </div>
+                    <!-- js -->
+                            <div class="review-form" id="review-form-restaurant-2" style="display: none;">
+                                <input type="text" placeholder="Your Name" id="user-name-restaurant-2" />
+
+                                <textarea placeholder="Your Review" id="review-comment-restaurant-2"></textarea>
+
+                                <input type="number" min="1" max="5" placeholder="Rating (1-5)" id="review-rating-restaurant-2" />
+
+                                <button onclick="submitReview('restaurant-2')">Submit Review</button>
+                            </div>
+                        </li>
+
+						<!-- Academic Buildings -->
+                        <li class="card-item swiper-slide">
+                            <div class="location-card">
+                                <div class="location-info">
+                                    <h2>Academic Buildings</h2>
+                                    <p class="rating">Average Rating: x/5</p>
+                                    <a href="#" class="button" onclick="showReviews('restaurant-2')">View Reviews</a>
+                                    <a href="#" class="button" onclick="showReviewForm('restaurant-2')">Leave Reviews</a>
+                                </div>
+                            </div>
+                    <!-- js -->
+                            <div class="review-form" id="review-form-restaurant-2" style="display: none;">
+                                <input type="text" placeholder="Your Name" id="user-name-restaurant-2" />
+
+                                <textarea placeholder="Your Review" id="review-comment-restaurant-2"></textarea>
+
+                                <input type="number" min="1" max="5" placeholder="Rating (1-5)" id="review-rating-restaurant-2" />
+
+                                <button onclick="submitReview('restaurant-2')">Submit Review</button>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-slide-button swiper-button-next"></div>
+                    <div class="swiper-slide-button swiper-button-prev"></div>
                 </div>
+            </div>
+    
 
-                    <!-- Campus Center Second Floor -->
-                    <div class="location-card">
-                        <div class="location-info">
-                            <h2>Campus Center Second Floor</h2>
-                            <p class="rating">Average Rating: x/5</p>
-                            <a href="" class="button">View Reviews</a>
-                            <a href="" class="button">Leave Reviews</a>
-                        </div>
-                    </div>
-                </div>
+                    
+                    
+                    
 
-                    <!-- ETEC -->
-                    <div class="location-card">
-                        <div class="location-info">
-                            <h2>ETEC</h2>
-                            <p class="rating">Average Rating: x/5</p>
-                            <a href="" class="button">View Reviews</a>
-                            <a href="" class="button">Leave Reviews</a>
-                        </div>
-                    </div>
-                </div>
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
 
-                    <!-- Academic Buildings -->
-                    <div class="location-card">
-                        <div class="location-info">
-                            <h2>Academic Buildings</h2>
-                            <p class="rating">Average Rating: x/5</p>
-                            <a href="" class="button">View Reviews</a>
-                            <a href="" class="button">Leave Reviews</a>
-                        </div>
-                    </div>
-                </div>
+        <script src="assets/database/restaurants.js"></script>
+        <script src="assets/database/reviews.js"></script>
+        <script src="assets/database/submitReview.js"></script>
+        <script src="assets/database/showReviewForm.js"></script>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-			<script src="assets/database/restaurants.js"></script>
-    		<script src="assets/database/reviews.js"></script>
-    		<script src="assets/database/submitReview.js"></script>
-    		<script src="assets/database/showReviewForm.js"></script>
-
-	</body>
+        <!-- Swiper script -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="assets/js/swiper.js"></script>
+    </body>
 </html>

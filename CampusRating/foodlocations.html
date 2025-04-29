@@ -1,1048 +1,551 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>MyCampusRating</title>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=no"
-    />
-    <link rel="stylesheet" href="assets/css/main.css" />
-  </head>
-  <body class="is-preload">
-    <!-- Wrapper -->
-    <div id="wrapper">
-      <!-- Header -->
-      <header id="header">
-        <div class="inner">
-          <!-- Logo -->
-          <a href="index.html" class="logo">
-            <span class="symbol"
-              ><img src="images/logostar.png" alt="MyCampusRating Logo" /></span
-            ><span class="title">MyCampusRating</span>
-          </a>
-
-          <!-- Nav -->
-          <nav>
-            <ul>
-              <li><a href="#menu">Menu</a></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
-
-      <!-- Menu -->
-      <nav id="menu">
-        <h2>Menu</h2>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about us.html">Meet The Team</a></li>
-          <li><a href="review.html">Make a Review</a></li>
-        </ul>
-      </nav>
-
-      <!-- Main -->
-      <div id="main">
-        <div class="inner">
-          <h1>Food Locations</h1>
-          <p>
-            Discover and see what people are saying about the diverse eating
-            arrangements here at SUNY Albany.
-          </p>
-          <span class="image main"><img src="" alt="" /></span>
-        </div>
-      </div>
-
-      <!-- Resturants -->
-
-      <!-- 518 MARKET -->
-     
-        <div class="location-card">
-          <div class="location-info">
-            <h2>518 Market</h2>
-            <p class="rating">Average Rating: x/5</p>
-            <a
-              href="https://ualbanydining.com/dining-near-me/518-market"
-              class="button"
-              >View Dining</a
-            >
-            <a href="#" class="button" onclick="showReviews('restaurant-1')"
-              >View Reviews</a
-            >
-            <a href="#" class="button" onclick="showReviewForm('restaurant-1')"
-              >Leave Reviews</a
-            >
-          </div>
-          <!-- REVIEW FORM ON PAGE -->
-        </div>
-
-        <div
-          class="review-form"
-          id="review-form-restaurant-1"
-          style="display: none"
-        >
-          <input
-            type="text"
-            placeholder="Your Name"
-            id="user-name-restaurant-1"
-          />
-
-          <textarea
-            placeholder="Your Review"
-            id="review-comment-restaurant-1"
-          ></textarea>
-
-          <input
-            type="number"
-            min="1"
-            max="5"
-            placeholder="Rating (1-5)"
-            id="review-rating-restaurant-1"
-          />
-
-          <button onclick="submitReview('restaurant-1')">Submit Review</button>
-        </div>
-      </div>
-
-      <!-- AL DENTE -->
-      <div class="location-card">
-        <div class="location-info">
-          <h2>Al Dente</h2>
-          <p class="rating">Average Rating: x/5</p>
-          <a
-            href="https://ualbanydining.com/dining-near-me/al-dente"
-            class="button"
-            >View Dining</a
-          >
-          <a href="#" class="button" onclick="showReviews('restaurant-2')"
-              >View Reviews</a
-            >
-            <a href="#" class="button" onclick="showReviewForm('restaurant-2')"
-              >Leave Reviews</a
-            >
-          </div>
-          <!-- REVIEW FORM ON PAGE -->
-        </div>
-
-        <div
-          class="review-form"
-          id="review-form-restaurant-2"
-          style="display: none"
-        >
-          <input
-            type="text"
-            placeholder="Your Name"
-            id="user-name-restaurant-2"
-          />
-
-          <textarea
-            placeholder="Your Review"
-            id="review-comment-restaurant-2"
-          ></textarea>
-
-          <input
-            type="number"
-            min="1"
-            max="5"
-            placeholder="Rating (1-5)"
-            id="review-rating-restaurant-2"
-          />
-
-          <button onclick="submitReview('restaurant-2')">Submit Review</button>
-        </div>
-      </div>
-      
-    </div>
-
-
-    <!-- CALYPSO -->
-    <div class="location-card">
-      <div class="location-info">
-        <h2>Calypso</h2>
-        <p class="rating">Average Rating: x/5</p>
-        <a
-          href="https://ualbanydining.com/dining-near-me/calypso"
-          class="button"
-          >View Dining</a
-        >
-        <a href="#" class="button" onclick="showReviews('restaurant-3')"
-              >View Reviews</a
-            >
-            <a href="#" class="button" onclick="showReviewForm('restaurant-3')"
-              >Leave Reviews</a
-            >
-          </div>
-          <!-- REVIEW FORM ON PAGE -->
-        </div>
-
-        <div
-          class="review-form"
-          id="review-form-restaurant-3"
-          style="display: none"
-        >
-          <input
-            type="text"
-            placeholder="Your Name"
-            id="user-name-restaurant-3"
-          />
-
-          <textarea
-            placeholder="Your Review"
-            id="review-comment-restaurant-3"
-          ></textarea>
-
-          <input
-            type="number"
-            min="1"
-            max="5"
-            placeholder="Rating (1-5)"
-            id="review-rating-restaurant-3"
-          />
-
-          <button onclick="submitReview('restaurant-3')">Submit Review</button>
-        </div>
-    </div>
-
-    <!-- CORNER DELI -->
-    <div class="location-card">
-      <div class="location-info">
-        <h2>Corner Deli</h2>
-        <p class="rating">Average Rating: x/5</p>
-        <a
-          href="https://ualbanydining.com/dining-near-me/corner-deli"
-          class="button"
-          >View Dining</a
-        >
-        <a href="#" class="button" onclick="showReviews('restaurant-4')"
-              >View Reviews</a
-            >
-            <a href="#" class="button" onclick="showReviewForm('restaurant-4')"
-              >Leave Reviews</a
-            >
-          </div>
-          <!-- REVIEW FORM ON PAGE -->
-        </div>
-
-        <div
-          class="review-form"
-          id="review-form-restaurant-4"
-          style="display: none"
-        >
-          <input
-            type="text"
-            placeholder="Your Name"
-            id="user-name-restaurant-4"
-          />
-
-          <textarea
-            placeholder="Your Review"
-            id="review-comment-restaurant-4"
-          ></textarea>
-
-          <input
-            type="number"
-            min="1"
-            max="5"
-            placeholder="Rating (1-5)"
-            id="review-rating-restaurant-4"
-          />
-
-          <button onclick="submitReview('restaurant-4')">Submit Review</button>
-        </div>
-    </div>
-
-    <!-- BABA'S -->
-    <div class="location-card">
-      <div class="location-info">
-        <h2>Baba's Pizza</h2>
-        <p class="rating">Average Rating: x/5</p>
-        <a href="https://ualbanydining.com/dining-near-me/babas" class="button"
-          >View Dining</a
-        >
-        <a href="#" class="button" onclick="showReviews('restaurant-5')"
-              >View Reviews</a
-            >
-            <a href="#" class="button" onclick="showReviewForm('restaurant-5')"
-              >Leave Reviews</a
-            >
-          </div>
-          <!-- REVIEW FORM ON PAGE -->
-        </div>
-
-        <div
-          class="review-form"
-          id="review-form-restaurant-5"
-          style="display: none"
-        >
-          <input
-            type="text"
-            placeholder="Your Name"
-            id="user-name-restaurant-5"
-          />
-
-          <textarea
-            placeholder="Your Review"
-            id="review-comment-restaurant-5"
-          ></textarea>
-
-          <input
-            type="number"
-            min="1"
-            max="5"
-            placeholder="Rating (1-5)"
-            id="review-rating-restaurant-5"
-          />
-
-          <button onclick="submitReview('restaurant-5')">Submit Review</button>
-        </div>
-    </div>
-
-    <!-- FOUNTAIN GRILL -->
-    <div class="location-card">
-      <div class="location-info">
-        <h2>Fountain Grill</h2>
-        <p class="rating">Average Rating: x/5</p>
-        <a
-          href="https://ualbanydining.com/dining-near-me/fountain-grill"
-          class="button"
-          >View Dining</a
-        >
-        <a href="#" class="button" onclick="showReviews('restaurant-6')"
-              >View Reviews</a
-            >
-            <a href="#" class="button" onclick="showReviewForm('restaurant-6')"
-              >Leave Reviews</a
-            >
-          </div>
-          <!-- REVIEW FORM ON PAGE -->
-        </div>
-
-        <div
-          class="review-form"
-          id="review-form-restaurant-6"
-          style="display: none"
-        >
-          <input
-            type="text"
-            placeholder="Your Name"
-            id="user-name-restaurant-6"
-          />
-
-          <textarea
-            placeholder="Your Review"
-            id="review-comment-restaurant-6"
-          ></textarea>
-
-          <input
-            type="number"
-            min="1"
-            max="5"
-            placeholder="Rating (1-5)"
-            id="review-rating-restaurant-6"
-          />
-
-          <button onclick="submitReview('restaurant-6')">Submit Review</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- NIKOS -->
-    <div class="food-locations">
-      <div class="location-card">
-        <div class="location-info">
-          <h2>NIKOS</h2>
-          <p class="rating">Average Rating: 4/5</p>
-          <a
-            href="https://www.ualbanydining.com/dining-near-me/nikos-cafe"
-            class="button"
-            >View Dining</a
-          >
-          <a href="#" class="button" onclick="showReviews('restaurant-7')"
-              >View Reviews</a
-            >
-            <a href="#" class="button" onclick="showReviewForm('restaurant-7')"
-              >Leave Reviews</a
-            >
-          </div>
-          <!-- REVIEW FORM ON PAGE -->
-        </div>
-
-        <div
-          class="review-form"
-          id="review-form-restaurant-7"
-          style="display: none"
-        >
-          <input
-            type="text"
-            placeholder="Your Name"
-            id="user-name-restaurant-7"
-          />
-
-          <textarea
-            placeholder="Your Review"
-            id="review-comment-restaurant-7"
-          ></textarea>
-
-          <input
-            type="number"
-            min="1"
-            max="5"
-            placeholder="Rating (1-5)"
-            id="review-rating-restaurant-7"
-          />
-
-          <button onclick="submitReview('restaurant-7')">Submit Review</button>
-        </div>
-      </div>
-      </div>
-      <!-- UMAI SUSHI -->
-      <div class="location-card">
-        <div class="location-info">
-          <h2>UMAI SUSHI</h2>
-          <p class="rating">Average Rating: 3.7/5</p>
-          <a
-            href="https://www.ualbanydining.com/dining-near-me/umai-sushi"
-            class="button"
-            >View Dining</a
-          >
-          <a href="#" class="button" onclick="showReviews('restaurant-8')"
-              >View Reviews</a
-            >
-            <a href="#" class="button" onclick="showReviewForm('restaurant-8')"
-              >Leave Reviews</a
-            >
-          </div>
-          <!-- REVIEW FORM ON PAGE -->
-        </div>
-
-        <div
-          class="review-form"
-          id="review-form-restaurant-8"
-          style="display: none"
-        >
-          <input
-            type="text"
-            placeholder="Your Name"
-            id="user-name-restaurant-8"
-          />
-
-          <textarea
-            placeholder="Your Review"
-            id="review-comment-restaurant-8"
-          ></textarea>
-
-          <input
-            type="number"
-            min="1"
-            max="5"
-            placeholder="Rating (1-5)"
-            id="review-rating-restaurant-8"
-          />
-
-          <button onclick="submitReview('restaurant-8')">Submit Review</button>
-        </div>
-      </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- STARBUCKS -->
-    <div class="location-card">
-      <div class="location-info">
-        <h2>Starbucks</h2>
-        <p class="rating">Average Rating: x/5</p>
-        <a
-          href="https://ualbanydining.com/dining-near-me/starbucks"
-          class="button"
-          >View Dining</a
-        >
-        <a href="#" class="button" onclick="showReviews('restaurant-9')"
-              >View Reviews</a
-            >
-            <a href="#" class="button" onclick="showReviewForm('restaurant-9')"
-              >Leave Reviews</a
-            >
-          </div>
-          <!-- REVIEW FORM ON PAGE -->
-        </div>
-
-        <div
-          class="review-form"
-          id="review-form-restaurant-9"
-          style="display: none"
-        >
-          <input
-            type="text"
-            placeholder="Your Name"
-            id="user-name-restaurant-9"
-          />
-
-          <textarea
-            placeholder="Your Review"
-            id="review-comment-restaurant-9"
-          ></textarea>
-
-          <input
-            type="number"
-            min="1"
-            max="5"
-            placeholder="Rating (1-5)"
-            id="review-rating-restaurant-9"
-          />
-
-          <button onclick="submitReview('restaurant-9')">Submit Review</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- STOCKS AND STEMS -->
-    <div class="location-card">
-      <div class="location-info">
-        <h2>Stocks and Stems</h2>
-        <p class="rating">Average Rating: x/5</p>
-        <a
-          href="https://ualbanydining.com/dining-near-me/stocks-and-stems"
-          class="button"
-          >View Dining</a
-        >
-        <a href="#" class="button" onclick="showReviews('restaurant-10')"
-              >View Reviews</a
-            >
-            <a href="#" class="button" onclick="showReviewForm('restaurant-10')"
-              >Leave Reviews</a
-            >
-          </div>
-          <!-- REVIEW FORM ON PAGE -->
-        </div>
-
-        <div
-          class="review-form"
-          id="review-form-restaurant-10"
-          style="display: none"
-        >
-          <input
-            type="text"
-            placeholder="Your Name"
-            id="user-name-restaurant-10"
-          />
-
-          <textarea
-            placeholder="Your Review"
-            id="review-comment-restaurant-10"
-          ></textarea>
-
-          <input
-            type="number"
-            min="1"
-            max="5"
-            placeholder="Rating (1-5)"
-            id="review-rating-restaurant-10"
-          />
-
-          <button onclick="submitReview('restaurant-10')">Submit Review</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- SUBCONNECTION -->
-    <div class="location-card">
-      <div class="location-info">
-        <h2>Subconnection</h2>
-        <p class="rating">Average Rating: x/5</p>
-        <a
-          href="https://ualbanydining.com/dining-near-me/subconnection"
-          class="button"
-          >View Dining</a
-        >
-        <a href="#" class="button" onclick="showReviews('restaurant-11')"
-              >View Reviews</a
-            >
-            <a href="#" class="button" onclick="showReviewForm('restaurant-11')"
-              >Leave Reviews</a
-            >
-          </div>
-          <!-- REVIEW FORM ON PAGE -->
-        </div>
-
-        <div
-          class="review-form"
-          id="review-form-restaurant-11"
-          style="display: none"
-        >
-          <input
-            type="text"
-            placeholder="Your Name"
-            id="user-name-restaurant-11"
-          />
-
-          <textarea
-            placeholder="Your Review"
-            id="review-comment-restaurant-11"
-          ></textarea>
-
-          <input
-            type="number"
-            min="1"
-            max="5"
-            placeholder="Rating (1-5)"
-            id="review-rating-restaurant-11"
-          />
-
-          <button onclick="submitReview('restaurant-11')">Submit Review</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- HALAL SHACK -->
-    <div class="location-card">
-      <div class="location-info">
-        <h2>Halal Shack</h2>
-        <p class="rating">Average Rating: x/5</p>
-        <a
-          href="https://ualbanydining.com/dining-near-me/the-halal-shack"
-          class="button"
-          >View Dining</a
-        >
-        <a href="#" class="button" onclick="showReviews('restaurant-12')"
-              >View Reviews</a
-            >
-            <a href="#" class="button" onclick="showReviewForm('restaurant-12')"
-              >Leave Reviews</a
-            >
-          </div>
-          <!-- REVIEW FORM ON PAGE -->
-        </div>
-
-        <div
-          class="review-form"
-          id="review-form-restaurant-12"
-          style="display: none"
-        >
-          <input
-            type="text"
-            placeholder="Your Name"
-            id="user-name-restaurant-12"
-          />
-
-          <textarea
-            placeholder="Your Review"
-            id="review-comment-restaurant-12"
-          ></textarea>
-
-          <input
-            type="number"
-            min="1"
-            max="5"
-            placeholder="Rating (1-5)"
-            id="review-rating-restaurant-12"
-          />
-
-          <button onclick="submitReview('restaurant-12')">Submit Review</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- 1844 -->
-    <div class="location-card">
-      <div class="location-info">
-        <h2>1844 Resturant</h2>
-        <p class="rating">Average Rating: x/5</p>
-        <a
-          href="https://ualbanydining.com/dining-near-me/1844-restaurant"
-          class="button"
-          >View Dining</a
-        >
-        <a href="#" class="button" onclick="showReviews('restaurant-13')"
-              >View Reviews</a
-            >
-            <a href="#" class="button" onclick="showReviewForm('restaurant-13')"
-              >Leave Reviews</a
-            >
-          </div>
-          <!-- REVIEW FORM ON PAGE -->
-        </div>
-
-        <div
-          class="review-form"
-          id="review-form-restaurant-13"
-          style="display: none"
-        >
-          <input
-            type="text"
-            placeholder="Your Name"
-            id="user-name-restaurant-13"
-          />
-
-          <textarea
-            placeholder="Your Review"
-            id="review-comment-restaurant-13"
-          ></textarea>
-
-          <input
-            type="number"
-            min="1"
-            max="5"
-            placeholder="Rating (1-5)"
-            id="review-rating-restaurant-13"
-          />
-
-          <button onclick="submitReview('restaurant-13')">Submit Review</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- TRES HABANEROS -->
-    <div class="location-card">
-      <div class="location-info">
-        <h2>Tres Habaneros</h2>
-        <p class="rating">Average Rating: x/5</p>
-        <a
-          href="https://ualbanydining.com/dining-near-me/tres-habaneros"
-          class="button"
-          >View Dining</a
-        >
-        <a href="#" class="button" onclick="showReviews('restaurant-14')"
-              >View Reviews</a
-            >
-            <a href="#" class="button" onclick="showReviewForm('restaurant-14')"
-              >Leave Reviews</a
-            >
-          </div>
-          <!-- REVIEW FORM ON PAGE -->
-        </div>
-
-        <div
-          class="review-form"
-          id="review-form-restaurant-14"
-          style="display: none"
-        >
-          <input
-            type="text"
-            placeholder="Your Name"
-            id="user-name-restaurant-14"
-          />
-
-          <textarea
-            placeholder="Your Review"
-            id="review-comment-restaurant-14"
-          ></textarea>
-
-          <input
-            type="number"
-            min="1"
-            max="5"
-            placeholder="Rating (1-5)"
-            id="review-rating-restaurant-14"
-          />
-
-          <button onclick="submitReview('restaurant-14')">Submit Review</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- JAMALS -->
-    <div class="location-card">
-      <div class="location-info">
-        <h2>Jamals</h2>
-        <p class="rating">Average Rating: x/5</p>
-        <a
-          href="https://ualbanydining.com/dining-near-me/jamals-chicken"
-          class="button"
-          >View Dining</a
-        >
-        <a href="#" class="button" onclick="showReviews('restaurant-15')"
-              >View Reviews</a
-            >
-            <a href="#" class="button" onclick="showReviewForm('restaurant-15')"
-              >Leave Reviews</a
-            >
-          </div>
-          <!-- REVIEW FORM ON PAGE -->
-        </div>
-
-        <div
-          class="review-form"
-          id="review-form-restaurant-15"
-          style="display: none"
-        >
-          <input
-            type="text"
-            placeholder="Your Name"
-            id="user-name-restaurant-15"
-          />
-
-          <textarea
-            placeholder="Your Review"
-            id="review-comment-restaurant-15"
-          ></textarea>
-
-          <input
-            type="number"
-            min="1"
-            max="5"
-            placeholder="Rating (1-5)"
-            id="review-rating-restaurant-15"
-          />
-
-          <button onclick="submitReview('restaurant-15')">Submit Review</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- UMAI FUSHION -->
-    <div class="location-card">
-      <div class="location-info">
-        <h2>Umai Fusion</h2>
-        <p class="rating">Average Rating: x/5</p>
-        <a
-          href="https://ualbanydining.com/dining-near-me/UMAI_Fusion"
-          class="button"
-          >View Dining</a
-        >
-        <a href="#" class="button" onclick="showReviews('restaurant-16')"
-              >View Reviews</a
-            >
-            <a href="#" class="button" onclick="showReviewForm('restaurant-16')"
-              >Leave Reviews</a
-            >
-          </div>
-          <!-- REVIEW FORM ON PAGE -->
-        </div>
-
-        <div
-          class="review-form"
-          id="review-form-restaurant-16"
-          style="display: none"
-        >
-          <input
-            type="text"
-            placeholder="Your Name"
-            id="user-name-restaurant-16"
-          />
-
-          <textarea
-            placeholder="Your Review"
-            id="review-comment-restaurant-16"
-          ></textarea>
-
-          <input
-            type="number"
-            min="1"
-            max="5"
-            placeholder="Rating (1-5)"
-            id="review-rating-restaurant-16"
-          />
-
-          <button onclick="submitReview('restaurant-16')">Submit Review</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- FRESH FRUIT BAR -->
-    <div class="location-card">
-      <div class="location-info">
-        <h2>Fresh Fruit Bar</h2>
-        <p class="rating">Average Rating: x/5</p>
-        <a
-          href="https://ualbanydining.com/dining-near-me/fruit_barhttps://ualbanydining.com/dining-near-me/fruit_bar"
-          class="button"
-          >View Dining</a
-        >
-        <a href="#" class="button" onclick="showReviews('restaurant-17')"
-              >View Reviews</a
-            >
-            <a href="#" class="button" onclick="showReviewForm('restaurant-17')"
-              >Leave Reviews</a
-            >
-          </div>
-          <!-- REVIEW FORM ON PAGE -->
-        </div>
-
-        <div
-          class="review-form"
-          id="review-form-restaurant-17"
-          style="display: none"
-        >
-          <input
-            type="text"
-            placeholder="Your Name"
-            id="user-name-restaurant-17"
-          />
-
-          <textarea
-            placeholder="Your Review"
-            id="review-comment-restaurant-17"
-          ></textarea>
-
-          <input
-            type="number"
-            min="1"
-            max="5"
-            placeholder="Rating (1-5)"
-            id="review-rating-restaurant-17"
-          />
-
-          <button onclick="submitReview('restaurant-17')">Submit Review</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- SWEET SHOP -->
-    <div class="location-card">
-      <div class="location-info">
-        <h2>Sweet Shop</h2>
-        <p class="rating">Average Rating: x/5</p>
-        <a
-          href="https://ualbanydining.com/dining-near-me/Sweet_Shop"
-          class="button"
-          >View Dining</a
-        >
-        <a href="#" class="button" onclick="showReviews('restaurant-18')"
-              >View Reviews</a
-            >
-            <a href="#" class="button" onclick="showReviewForm('restaurant-18')"
-              >Leave Reviews</a
-            >
-          </div>
-          <!-- REVIEW FORM ON PAGE -->
-        </div>
-
-        <div
-          class="review-form"
-          id="review-form-restaurant-18"
-          style="display: none"
-        >
-          <input
-            type="text"
-            placeholder="Your Name"
-            id="user-name-restaurant-18"
-          />
-
-          <textarea
-            placeholder="Your Review"
-            id="review-comment-restaurant-18"
-          ></textarea>
-
-          <input
-            type="number"
-            min="1"
-            max="5"
-            placeholder="Rating (1-5)"
-            id="review-rating-restaurant-18"
-          />
-
-          <button onclick="submitReview('restaurant-18')">Submit Review</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- EAST CAFE -->
-    <div class="location-card">
-      <div class="location-info">
-        <h2>East Cafe</h2>
-        <p class="rating">Average Rating: x/5</p>
-        <a
-          href="https://ualbanydining.com/dining-near-me/east_cafe"
-          class="button"
-          >View Dining</a
-        >
-        <a href="#" class="button" onclick="showReviews('restaurant-19')"
-              >View Reviews</a
-            >
-            <a href="#" class="button" onclick="showReviewForm('restaurant-19')"
-              >Leave Reviews</a
-            >
-          </div>
-          <!-- REVIEW FORM ON PAGE -->
-        </div>
-
-        <div
-          class="review-form"
-          id="review-form-restaurant-19"
-          style="display: none"
-        >
-          <input
-            type="text"
-            placeholder="Your Name"
-            id="user-name-restaurant-19"
-          />
-
-          <textarea
-            placeholder="Your Review"
-            id="review-comment-restaurant-19"
-          ></textarea>
-
-          <input
-            type="number"
-            min="1"
-            max="5"
-            placeholder="Rating (1-5)"
-            id="review-rating-restaurant-19"
-          />
-
-          <button onclick="submitReview('restaurant-19')">Submit Review</button>
-        </div>
-      </div>
-    </div>
-    <!-- SPICE MARKET -->
-    <div class="location-card">
-      <div class="location-info">
-        <h2>Spice Market</h2>
-        <p class="rating">Average Rating: x/5</p>
-        <a
-          href="https://ualbanydining.com/dining-near-me/spice-market"
-          class="button"
-          >View Dining</a
-        >
-        <a href="#" class="button" onclick="showReviews('restaurant-20')"
-              >View Reviews</a
-            >
-            <a href="#" class="button" onclick="showReviewForm('restaurant-20')"
-              >Leave Reviews</a
-            >
-          </div>
-          <!-- REVIEW FORM ON PAGE -->
-        </div>
-
-        <div
-          class="review-form"
-          id="review-form-restaurant-20"
-          style="display: none"
-        >
-          <input
-            type="text"
-            placeholder="Your Name"
-            id="user-name-restaurant-20"
-          />
-
-          <textarea
-            placeholder="Your Review"
-            id="review-comment-restaurant-20"
-          ></textarea>
-
-          <input
-            type="number"
-            min="1"
-            max="5"
-            placeholder="Rating (1-5)"
-            id="review-rating-restaurant-20"
-          />
-
-          <button onclick="submitReview('restaurant-20')">Submit Review</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
-
-    <script src="assets/database/restaurants.js"></script>
-    <script src="assets/database/reviews.js"></script>
-    <script src="assets/database/submitReview.js"></script>
-    <script src="assets/database/showReviewForm.js"></script>
-  </body>
+    <head>
+        <title>MyCampusRating</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        
+    </head>
+    <body class="is-preload">
+        <!-- Wrapper -->
+        <div id="wrapper">
+            <!-- Header -->
+            <header id="header">
+                <div class="inner">
+                    <!-- Logo -->
+                    <a href="index.html" class="logo">
+                        <span class="symbol"><img src="images/logostar.png" alt="MyCampusRating Logo" /></span><span class="title">MyCampusRating</span>
+                    </a>
+
+                    <!-- Nav -->
+                    <nav>
+                        <ul>
+                            <li><a href="#menu">Menu</a></li>
+                        </ul>
+                    </nav>
+                </div>
+              </div>
+            </header>
+
+            <!-- Menu -->
+            <nav id="menu">
+                <h2>Menu</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about us.html">Meet The Team</a></li>
+                    <li><a href="review.html">Make a Review</a></li>
+                </ul>
+            </nav>
+
+            <!-- Main -->
+            <div id="main">
+                <div class="inner">
+                    <h1>Food Locations</h1>
+                    <header>
+                        <p>
+                            Discover and see what people are saying about the diverse eating arrangements here at SUNY Albany.
+                        </p> 
+                    </header>
+                </div>
+            </div>
+
+            <!-- Resturants -->
+            <div class="container swiper">
+                <div class="card-wrapper">
+                    <!-- 518 MARKET -->
+                    <ul class="card-list swiper-wrapper">
+                        <li class="card-item swiper-slide">
+                            <div class="location-card">
+                                <div class="location-info">
+                                    <h2>518 Market</h2>
+                                    <p class="rating">Average Rating: x/5</p>
+                                    <a href="https://ualbanydining.com/dining-near-me/518-market" class="button">View Dining</a>
+                                    <a href="#" class="button" onclick="showReviews('restaurant-1')">View Reviews</a>
+                                    <a href="#" class="button" onclick="showReviewForm('restaurant-1')">Leave Reviews</a>
+                                </div>
+                            </div>
+                    <!-- js -->
+                            <div class="review-form" id="review-form-restaurant-1" style="display: none;">
+                                <input type="text" placeholder="Your Name" id="user-name-restaurant-1" />
+
+                                <textarea placeholder="Your Review" id="review-comment-restaurant-1"></textarea>
+
+                                <input type="number" min="1" max="5" placeholder="Rating (1-5)" id="review-rating-restaurant-1" />
+
+                                <button onclick="submitReview('restaurant-1')">Submit Review</button>
+                            </div>
+                        </li>
+
+                        <!-- Al Dente -->
+                        <li class="card-item swiper-slide">
+                            <div class="location-card">
+                                <div class="location-info">
+                                    <h2>Al Dente</h2>
+                                    <p class="rating">Average Rating: x/5</p>
+                                    <a href="https://ualbanydining.com/dining-near-me/al-dente" class="button">View Dining</a>
+                                    <a href="#" class="button" onclick="showReviews('restaurant-2')">View Reviews</a>
+                                    <a href="#" class="button" onclick="showReviewForm('restaurant-2')">Leave Reviews</a>
+                                </div>
+                            </div>
+                    <!-- js -->
+                            <div class="review-form" id="review-form-restaurant-2" style="display: none;">
+                                <input type="text" placeholder="Your Name" id="user-name-restaurant-2" />
+
+                                <textarea placeholder="Your Review" id="review-comment-restaurant-2"></textarea>
+
+                                <input type="number" min="1" max="5" placeholder="Rating (1-5)" id="review-rating-restaurant-2" />
+
+                                <button onclick="submitReview('restaurant-2')">Submit Review</button>
+                            </div>
+                        </li>
+
+                    <!-- Calypso -->
+                        <li class="card-item swiper-slide">
+                            <div class="location-card">
+                                <div class="location-info">
+                                    <h2>Calypso</h2>
+                                    <p class="rating">Average Rating: x/5</p>
+                                    <a href="https://ualbanydining.com/dining-near-me/calypso" class="button">View Dining</a>
+                                    <a href="#" class="button" onclick="showReviews('restaurant-3')">View Reviews</a>
+                                    <a href="#" class="button" onclick="showReviewForm('restaurant-3')">Leave Reviews</a>
+                                </div>
+                            </div>
+                    <!-- js -->
+                            <div class="review-form" id="review-form-restaurant-3" style="display: none;">
+                                <input type="text" placeholder="Your Name" id="user-name-restaurant-3" />
+
+                                <textarea placeholder="Your Review" id="review-comment-restaurant-3"></textarea>
+
+                                <input type="number" min="1" max="5" placeholder="Rating (1-5)" id="review-rating-restaurant-3" />
+
+                                <button onclick="submitReview('restaurant-3')">Submit Review</button>
+                            </div>
+
+                        </li>
+
+                    <!-- Corner Deli -->
+                        <li class="card-item swiper-slide">
+                            <div class="location-card">
+                                <div class="location-info">
+                                    <h2>Corner Deli</h2>
+                                    <p class="rating">Average Rating: x/5</p>
+                                    <a href="https://ualbanydining.com/dining-near-me/corner-deli" class="button">View Dining</a>
+                                    <a href="#" class="button" onclick="showReviews('restaurant-4')">View Reviews</a>
+                                    <a href="#" class="button" onclick="showReviewForm('restaurant-4')">Leave Reviews</a>
+                                </div>
+                            </div>
+                    <!-- js -->
+                            <div class="review-form" id="review-form-restaurant-4" style="display: none;">
+                                <input type="text" placeholder="Your Name" id="user-name-restaurant-4" />
+
+                                <textarea placeholder="Your Review" id="review-comment-restaurant-4"></textarea>
+
+                                <input type="number" min="1" max="5" placeholder="Rating (1-5)" id="review-rating-restaurant-4" />
+
+                                <button onclick="submitReview('restaurant-4')">Submit Review</button>
+                            </div>
+
+                        </li>
+
+                    <!-- Baba's Pizza -->
+                        <li class="card-item swiper-slide">
+                            <div class="location-card">
+                                <div class="location-info">
+                                    <h2>Baba's Pizza</h2>
+                                    <p class="rating">Average Rating: x/5</p>
+                                    <a href="https://ualbanydining.com/dining-near-me/babas" class="button">View Dining</a>
+                                    <a href="#" class="button" onclick="showReviews('restaurant-5')">View Reviews</a>
+                                    <a href="#" class="button" onclick="showReviewForm('restaurant-5')">Leave Reviews</a>
+                                </div>
+                            </div>
+                    <!-- js -->
+                            <div class="review-form" id="review-form-restaurant-5" style="display: none;">
+                                <input type="text" placeholder="Your Name" id="user-name-restaurant-5" />
+
+                                <textarea placeholder="Your Review" id="review-comment-restaurant-5"></textarea>
+
+                                <input type="number" min="1" max="5" placeholder="Rating (1-5)" id="review-rating-restaurant-5" />
+
+                                <button onclick="submitReview('restaurant-5')">Submit Review</button>
+                            </div>
+
+                        </li>
+
+                    <!-- Fountain Grill -->
+                        <li class="card-item swiper-slide">
+                            <div class="location-card">
+                                <div class="location-info">
+                                    <h2>Fountain Grill</h2>
+                                    <p class="rating">Average Rating: x/5</p>
+                                    <a href="https://ualbanydining.com/dining-near-me/fountain-grill" class="button">View Dining</a>
+                                    <a href="#" class="button" onclick="showReviews('restaurant-6')">View Reviews</a>
+                                    <a href="#" class="button" onclick="showReviewForm('restaurant-6')">Leave Reviews</a>
+                                </div>
+                            </div>
+                    <!-- js -->
+                            <div class="review-form" id="review-form-restaurant-6" style="display: none;">
+                                <input type="text" placeholder="Your Name" id="user-name-restaurant-6" />
+
+                                <textarea placeholder="Your Review" id="review-comment-restaurant-6"></textarea>
+
+                                <input type="number" min="1" max="5" placeholder="Rating (1-5)" id="review-rating-restaurant-6" />
+
+                                <button onclick="submitReview('restaurant-6')">Submit Review</button>
+                            </div>
+
+                        </li>
+
+                        <!-- Nikos -->
+                        <li class="card-item swiper-slide">
+                            <div class="location-card">
+                                <div class="location-info">
+                                    <h2>Nikos Cafe</h2>
+                                    <p class="rating">Average Rating: x/5</p>
+                                    <a href="https://ualbanydining.com/dining-near-me/nikos-cafe" class="button">View Dining</a>
+                                    <a href="#" class="button" onclick="showReviews('restaurant-7')">View Reviews</a>
+                                    <a href="#" class="button" onclick="showReviewForm('restaurant-7')">Leave Reviews</a>
+                                </div>
+                            </div>
+                    <!-- js -->
+                            <div class="review-form" id="review-form-restaurant-7" style="display: none;">
+                                <input type="text" placeholder="Your Name" id="user-name-restaurant-7" />
+
+                                <textarea placeholder="Your Review" id="review-comment-restaurant-7"></textarea>
+
+                                <input type="number" min="1" max="5" placeholder="Rating (1-5)" id="review-rating-restaurant-7" />
+
+                                <button onclick="submitReview('restaurant-7')">Submit Review</button>
+                            </div>
+                        </li>
+
+                        <!-- Umai Sushi -->
+                        <li class="card-item swiper-slide">
+                            <div class="location-card">
+                                <div class="location-info">
+                                    <h2>Umai Sushi</h2>
+                                    <p class="rating">Average Rating: x/5</p>
+                                    <a href="https://ualbanydining.com/dining-near-me/umai-sushi" class="button">View Dining</a>
+                                    <a href="#" class="button" onclick="showReviews('restaurant-8')">View Reviews</a>
+                                    <a href="#" class="button" onclick="showReviewForm('restaurant-8')">Leave Reviews</a>
+                                </div>
+                            </div>
+                    <!-- js -->
+                            <div class="review-form" id="review-form-restaurant-8" style="display: none;">
+                                <input type="text" placeholder="Your Name" id="user-name-restaurant-8" />
+
+                                <textarea placeholder="Your Review" id="review-comment-restaurant-8"></textarea>
+
+                                <input type="number" min="1" max="5" placeholder="Rating (1-5)" id="review-rating-restaurant-8" />
+
+                                <button onclick="submitReview('restaurant-8')">Submit Review</button>
+                            </div>
+                        </li>
+
+                        <!-- Starbucks -->
+                        <li class="card-item swiper-slide">
+                            <div class="location-card">
+                                <div class="location-info">
+                                    <h2>Starbucks</h2>
+                                    <p class="rating">Average Rating: x/5</p>
+                                    <a href="https://ualbanydining.com/dining-near-me/starbucks" class="button">View Dining</a>
+                                    <a href="#" class="button" onclick="showReviews('restaurant-9')">View Reviews</a>
+                                    <a href="#" class="button" onclick="showReviewForm('restaurant-9')">Leave Reviews</a>
+                                </div>
+                            </div>
+                    <!-- js -->
+                            <div class="review-form" id="review-form-restaurant-9" style="display: none;">
+                                <input type="text" placeholder="Your Name" id="user-name-restaurant-9" />
+
+                                <textarea placeholder="Your Review" id="review-comment-restaurant-9"></textarea>
+
+                                <input type="number" min="1" max="5" placeholder="Rating (1-5)" id="review-rating-restaurant-9" />
+
+                                <button onclick="submitReview('restaurant-9')">Submit Review</button>
+                            </div>
+                        </li>
+
+                        <!-- Stocks and Stems -->
+                        <li class="card-item swiper-slide">
+                            <div class="location-card">
+                                <div class="location-info">
+                                    <h2>Stocks and Stems</h2>
+                                    <p class="rating">Average Rating: x/5</p>
+                                    <a href="https://ualbanydining.com/dining-near-me/stocks-and-stems" class="button">View Dining</a>
+                                    <a href="#" class="button" onclick="showReviews('restaurant-10')">View Reviews</a>
+                                    <a href="#" class="button" onclick="showReviewForm('restaurant-10')">Leave Reviews</a>
+                                </div>
+                            </div>
+                    <!-- js -->
+                            <div class="review-form" id="review-form-restaurant-10" style="display: none;">
+                                <input type="text" placeholder="Your Name" id="user-name-restaurant-10" />
+
+                                <textarea placeholder="Your Review" id="review-comment-restaurant-10"></textarea>
+
+                                <input type="number" min="1" max="5" placeholder="Rating (1-5)" id="review-rating-restaurant-10" />
+
+                                <button onclick="submitReview('restaurant-10')">Submit Review</button>
+                            </div>
+                        </li>
+
+                        <!-- Subconnection -->
+                        <li class="card-item swiper-slide">
+                            <div class="location-card">
+                                <div class="location-info">
+                                    <h2>Subconnection</h2>
+                                    <p class="rating">Average Rating: x/5</p>
+                                    <a href="https://ualbanydining.com/dining-near-me/subconnection" class="button">View Dining</a>
+                                    <a href="#" class="button" onclick="showReviews('restaurant-11')">View Reviews</a>
+                                    <a href="#" class="button" onclick="showReviewForm('restaurant-11')">Leave Reviews</a>
+                                </div>
+                            </div>
+                    <!-- js -->
+                            <div class="review-form" id="review-form-restaurant-11" style="display: none;">
+                                <input type="text" placeholder="Your Name" id="user-name-restaurant-11" />
+
+                                <textarea placeholder="Your Review" id="review-comment-restaurant-5"></textarea>
+
+                                <input type="number" min="1" max="5" placeholder="Rating (1-5)" id="review-rating-restaurant-11" />
+
+                                <button onclick="submitReview('restaurant-11')">Submit Review</button>
+                            </div>
+                        </li>
+
+                        <!-- Halal Shack -->
+                        <li class="card-item swiper-slide">
+                            <div class="location-card">
+                                <div class="location-info">
+                                    <h2>Halal Shack</h2>
+                                    <p class="rating">Average Rating: x/5</p>
+                                    <a href="https://ualbanydining.com/dining-near-me/the-halal-shack" class="button">View Dining</a>
+                                    <a href="#" class="button" onclick="showReviews('restaurant-12')">View Reviews</a>
+                                    <a href="#" class="button" onclick="showReviewForm('restaurant-12')">Leave Reviews</a>
+                                </div>
+                            </div>
+                    <!-- js -->
+                            <div class="review-form" id="review-form-restaurant-12" style="display: none;">
+                                <input type="text" placeholder="Your Name" id="user-name-restaurant-12" />
+
+                                <textarea placeholder="Your Review" id="review-comment-restaurant-12"></textarea>
+
+                                <input type="number" min="1" max="5" placeholder="Rating (1-5)" id="review-rating-restaurant-12" />
+
+                                <button onclick="submitReview('restaurant-12')">Submit Review</button>
+                            </div>
+                        </li>
+
+                        <!-- 1844 Resturant -->
+                        <li class="card-item swiper-slide">
+                            <div class="location-card">
+                                <div class="location-info">
+                                    <h2>1844 Restaurant</h2>
+                                    <p class="rating">Average Rating: x/5</p>
+                                    <a href="https://ualbanydining.com/dining-near-me/1844-restaurant" class="button">View Dining</a>
+                                    <a href="#" class="button" onclick="showReviews('restaurant-13')">View Reviews</a>
+                                    <a href="#" class="button" onclick="showReviewForm('restaurant-13')">Leave Reviews</a>
+                                </div>
+                            </div>
+                    <!-- js -->
+                            <div class="review-form" id="review-form-restaurant-13" style="display: none;">
+                                <input type="text" placeholder="Your Name" id="user-name-restaurant-13" />
+
+                                <textarea placeholder="Your Review" id="review-comment-restaurant-13"></textarea>
+
+                                <input type="number" min="1" max="5" placeholder="Rating (1-5)" id="review-rating-restaurant-13" />
+
+                                <button onclick="submitReview('restaurant-13')">Submit Review</button>
+                            </div>
+                        </li>
+
+                        <!-- Tres Habaneros -->
+                        <li class="card-item swiper-slide">
+                            <div class="location-card">
+                                <div class="location-info">
+                                    <h2>Tres Habaneros</h2>
+                                    <p class="rating">Average Rating: x/5</p>
+                                    <a href="https://ualbanydining.com/dining-near-me/tres-habaneros" class="button">View Dining</a>
+                                    <a href="#" class="button" onclick="showReviews('restaurant-14')">View Reviews</a>
+                                    <a href="#" class="button" onclick="showReviewForm('restaurant-14')">Leave Reviews</a>
+                                </div>
+                            </div>
+                    <!-- js -->
+                            <div class="review-form" id="review-form-restaurant-14" style="display: none;">
+                                <input type="text" placeholder="Your Name" id="user-name-restaurant-14" />
+
+                                <textarea placeholder="Your Review" id="review-comment-restaurant-14"></textarea>
+
+                                <input type="number" min="1" max="5" placeholder="Rating (1-5)" id="review-rating-restaurant-14" />
+
+                                <button onclick="submitReview('restaurant-14')">Submit Review</button>
+                            </div>
+                        </li>
+
+                        <!-- Jamasls Chicken -->
+                        <li class="card-item swiper-slide">
+                            <div class="location-card">
+                                <div class="location-info">
+                                    <h2>Jamasls Chicken</h2>
+                                    <p class="rating">Average Rating: x/5</p>
+                                    <a href="https://ualbanydining.com/dining-near-me/jamals-chicken" class="button">View Dining</a>
+                                    <a href="#" class="button" onclick="showReviews('restaurant-15')">View Reviews</a>
+                                    <a href="#" class="button" onclick="showReviewForm('restaurant-15')">Leave Reviews</a>
+                                </div>
+                            </div>
+                    <!-- js -->
+                            <div class="review-form" id="review-form-restaurant-15" style="display: none;">
+                                <input type="text" placeholder="Your Name" id="user-name-restaurant-15" />
+
+                                <textarea placeholder="Your Review" id="review-comment-restaurant-15"></textarea>
+
+                                <input type="number" min="1" max="5" placeholder="Rating (1-5)" id="review-rating-restaurant-15" />
+
+                                <button onclick="submitReview('restaurant-15')">Submit Review</button>
+                            </div>
+                        </li>
+
+                        <!-- Umai Fusion -->
+                        <li class="card-item swiper-slide">
+                            <div class="location-card">
+                                <div class="location-info">
+                                    <h2>Umai Fusion</h2>
+                                    <p class="rating">Average Rating: x/5</p>
+                                    <a href="https://ualbanydining.com/dining-near-me/UMAI_fusion" class="button">View Dining</a>
+                                    <a href="#" class="button" onclick="showReviews('restaurant-16')">View Reviews</a>
+                                    <a href="#" class="button" onclick="showReviewForm('restaurant-16')">Leave Reviews</a>
+                                </div>
+                            </div>
+                    <!-- js -->
+                            <div class="review-form" id="review-form-restaurant-16" style="display: none;">
+                                <input type="text" placeholder="Your Name" id="user-name-restaurant-16" />
+
+                                <textarea placeholder="Your Review" id="review-comment-restaurant-16"></textarea>
+
+                                <input type="number" min="1" max="5" placeholder="Rating (1-5)" id="review-rating-restaurant-16" />
+
+                                <button onclick="submitReview('restaurant-16')">Submit Review</button>
+                            </div>
+                        </li>
+
+                        <!-- Fresh Fruit Bar -->
+                        <li class="card-item swiper-slide">
+                            <div class="location-card">
+                                <div class="location-info">
+                                    <h2>Fresh Fruit Bar</h2>
+                                    <p class="rating">Average Rating: x/5</p>
+                                    <a href="https://ualbanydining.com/dining-near-me/fruit_bar" class="button">View Dining</a>
+                                    <a href="#" class="button" onclick="showReviews('restaurant-17')">View Reviews</a>
+                                    <a href="#" class="button" onclick="showReviewForm('restaurant-17')">Leave Reviews</a>
+                                </div>
+                            </div>
+                    <!-- js -->
+                            <div class="review-form" id="review-form-restaurant-17" style="display: none;">
+                                <input type="text" placeholder="Your Name" id="user-name-restaurant-17" />
+
+                                <textarea placeholder="Your Review" id="review-comment-restaurant-17"></textarea>
+
+                                <input type="number" min="1" max="5" placeholder="Rating (1-5)" id="review-rating-restaurant-17" />
+
+                                <button onclick="submitReview('restaurant-17')">Submit Review</button>
+                            </div>
+                        </li>
+
+                        <!-- Sweet Shop -->
+                        <li class="card-item swiper-slide">
+                            <div class="location-card">
+                                <div class="location-info">
+                                    <h2>Sweet Shop</h2>
+                                    <p class="rating">Average Rating: x/5</p>
+                                    <a href="https://ualbanydining.com/dining-near-me/Sweet_Shop" class="button">View Dining</a>
+                                    <a href="#" class="button" onclick="showReviews('restaurant-18')">View Reviews</a>
+                                    <a href="#" class="button" onclick="showReviewForm('restaurant-18')">Leave Reviews</a>
+                                </div>
+                            </div>
+                    <!-- js -->
+                            <div class="review-form" id="review-form-restaurant-18" style="display: none;">
+                                <input type="text" placeholder="Your Name" id="user-name-restaurant-18" />
+
+                                <textarea placeholder="Your Review" id="review-comment-restaurant-18"></textarea>
+
+                                <input type="number" min="1" max="5" placeholder="Rating (1-5)" id="review-rating-restaurant-18" />
+
+                                <button onclick="submitReview('restaurant-18')">Submit Review</button>
+                            </div>
+                        </li>
+
+                        <!-- East Cafe -->
+                        <li class="card-item swiper-slide">
+                            <div class="location-card">
+                                <div class="location-info">
+                                    <h2>East Cafe</h2>
+                                    <p class="rating">Average Rating: x/5</p>
+                                    <a href="https://ualbanydining.com/dining-near-me/east_cafe" class="button">View Dining</a>
+                                    <a href="#" class="button" onclick="showReviews('restaurant-19')">View Reviews</a>
+                                    <a href="#" class="button" onclick="showReviewForm('restaurant-19')">Leave Reviews</a>
+                                </div>
+                            </div>
+                    <!-- js -->
+                            <div class="review-form" id="review-form-restaurant-19" style="display: none;">
+                                <input type="text" placeholder="Your Name" id="user-name-restaurant-19" />
+
+                                <textarea placeholder="Your Review" id="review-comment-restaurant-19"></textarea>
+
+                                <input type="number" min="1" max="5" placeholder="Rating (1-5)" id="review-rating-restaurant-19" />
+
+                                <button onclick="submitReview('restaurant-19')">Submit Review</button>
+                            </div>
+                        </li>
+
+                        <!-- Spice Market -->
+                        <li class="card-item swiper-slide">
+                            <div class="location-card">
+                                <div class="location-info">
+                                    <h2>Spice Market</h2>
+                                    <p class="rating">Average Rating: x/5</p>
+                                    <a href="https://ualbanydining.com/dining-near-me/spice-market" class="button">View Dining</a>
+                                    <a href="#" class="button" onclick="showReviews('restaurant-20')">View Reviews</a>
+                                    <a href="#" class="button" onclick="showReviewForm('restaurant-20')">Leave Reviews</a>
+                                </div>
+                            </div>
+                    <!-- js -->
+                            <div class="review-form" id="review-form-restaurant-20" style="display: none;">
+                                <input type="text" placeholder="Your Name" id="user-name-restaurant-20" />
+
+                                <textarea placeholder="Your Review" id="review-comment-restaurant-20"></textarea>
+
+                                <input type="number" min="1" max="5" placeholder="Rating (1-5)" id="review-rating-restaurant-20" />
+
+                                <button onclick="submitReview('restaurant-20')">Submit Review</button>
+                            </div>
+                        </li>
+
+                        
+                    </ul>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-slide-button swiper-button-next"></div>
+                    <div class="swiper-slide-button swiper-button-prev"></div>
+                </div>
+            </div>
+    
+
+                    
+                    
+                    
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+
+        <script src="assets/database/restaurants.js"></script>
+        <script src="assets/database/reviews.js"></script>
+        <script src="assets/database/submitReview.js"></script>
+        <script src="assets/database/showReviewForm.js"></script>
+
+        <!-- Swiper script -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="assets/js/swiper.js"></script>
+    </body>
 </html>
