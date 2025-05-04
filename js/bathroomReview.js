@@ -1,21 +1,7 @@
-const defaultBathroomLocations = [
-    { id: 'campus-center-first', name: 'Campus Center First Floor', reviews: [] },
-    { id: 'campus-center-second', name: 'Campus Center Second Floor', reviews: [] },
-    { id: 'etec', name: 'ETEC', reviews: [] },
-    { id: 'academic-buildings', name: 'Academic Buildings', reviews: [] }
-];
+// bathroomReview.js
 
-// Function to load initial data
-function loadInitialData() {
-    const stored = localStorage.getItem('bathroomLocations');
-    if (!stored) {
-        localStorage.setItem('bathroomLocations', JSON.stringify(defaultBathroomLocations));
-    }
-    defaultBathroomLocations.forEach(location => showReviews(location.id));
-}
-
-// Submit review
-function submitReview(locationId) {
+// Submit review to the server
+async function submitReview(locationId) {
     const name = document.getElementById(`user-name-${locationId}`).value.trim();
     const comment = document.getElementById(`review-comment-${locationId}`).value.trim();
     const rating = parseInt(document.getElementById(`review-rating-${locationId}`).value);
@@ -25,23 +11,36 @@ function submitReview(locationId) {
         return;
     }
 
-    const review = { name, comment, rating };
-    saveReview(locationId, review);
+    const review = { locationId, name, comment, rating };
 
-    // Clear form
-    document.getElementById(`user-name-${locationId}`).value = '';
-    document.getElementById(`review-comment-${locationId}`).value = '';
-    document.getElementById(`review-rating-${locationId}`).value = '';
+    // Send review to the server
+    const response = await fetch('/api/reviews', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(review)
+    });
 
-    // Refresh reviews
-    showReviews(locationId);
-    hideReviewForm(locationId);
-    alert("Thank you for your review!"); // User feedback
+    if (response.ok) {
+        // Clear form
+        document.getElementById(`user-name-${locationId}`).value = '';
+        document.getElementById(`review-comment-${locationId}`).value = '';
+        document.getElementById(`review-rating-${locationId}`).value = '';
+
+        // Refresh reviews
+        showReviews(locationId);
+        hideReviewForm(locationId);
+        alert("Thank you for your review!");
+    } else {
+        alert("Failed to submit review.");
+    }
 }
 
-// Display reviews and average rating
-function showReviews(locationId) {
-    const reviews = getReviews(locationId);
+// Display reviews from the server
+async function showReviews(locationId) {
+    const response = await fetch(`/api/reviews/${locationId}`);
+    const reviews = await response.json();
     const container = document.getElementById(`reviews-${locationId}`);
     const ratingDisplay = document.getElementById(`rating-${locationId}`);
 
@@ -68,21 +67,6 @@ function showReviews(locationId) {
     ratingDisplay.textContent = `Average Rating: ${averageRating}/5`;
 }
 
-// Save review to local storage
-function saveReview(locationId, review) {
-    const locations = JSON.parse(localStorage.getItem('bathroomLocations'));
-    const location = locations.find(loc => loc.id === locationId);
-    location.reviews.push(review);
-    localStorage.setItem('bathroomLocations', JSON.stringify(locations));
-}
-
-// Get reviews from local storage
-function getReviews(locationId) {
-    const locations = JSON.parse(localStorage.getItem('bathroomLocations'));
-    const location = locations.find(loc => loc.id === locationId);
-    return location ? location.reviews : [];
-}
-
 // Show review form
 function showReviewForm(locationId) {
     document.getElementById(`review-form-${locationId}`).style.display = 'block';
@@ -94,19 +78,7 @@ function hideReviewForm(locationId) {
 }
 
 // Load initial data on page load
-window.onload = loadInitialData;
-
-// Add event listeners to buttons
-document.querySelectorAll('.button').forEach(button => {
-    button.addEventListener('click', function(event) {
-        event.preventDefault(); // Prevent the default anchor behavior
-
-        // Determine which function to call based on the button's text or data attribute
-        const locationId = this.getAttribute('data-location-id');
-        if (this.textContent.includes('View Reviews')) {
-            showReviews(locationId);
-        } else if (this.textContent.includes('Leave Review')) {
-            showReviewForm(locationId);
-        }
-    });
-});
+window.onload = function() {
+    const locations = ['campus-center-first', 'campus-center-second', 'etec', 'academic-buildings'];
+    locations.forEach(location => showReviews(location));
+};
