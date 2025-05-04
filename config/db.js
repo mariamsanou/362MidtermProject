@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const connectDB = async () => {
     try {
-        const mongoString = process.env.MONGO_URI; // Use an environment variable for the connection string
+        const mongoString = process.env.MONGO_URI; 
         await mongoose.connect(mongoString, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
@@ -10,7 +10,7 @@ const connectDB = async () => {
         console.log('MongoDB connected successfully');
     } catch (error) {
         console.error('MongoDB connection error:', error);
-        process.exit(1); // Exit the process with failure
+        process.exit(1); 
     }
 };
 

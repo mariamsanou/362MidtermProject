@@ -10,7 +10,7 @@ const app = express();
 // Connect to DB
 require('./config/db')();
 
-// Serve static files from the client folder (move this up)
+// Serve static files from the client folder 
 app.use(express.static(path.join(__dirname, '../client')));
 
 // JSON middleware
