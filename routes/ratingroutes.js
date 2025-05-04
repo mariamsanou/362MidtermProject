@@ -1,25 +1,25 @@
 const express = require('express');
 const router = express.Router();
-const Rating = require('../models/Rating');
+const Rating = require('../models/rating');
 
-// POST a new rating
+// POST - Submit a new rating
 router.post('/', async (req, res) => {
   try {
     const newRating = new Rating(req.body);
-    const savedRating = await newRating.save();
-    res.status(201).json(savedRating);
+    const saved = await newRating.save();
+    res.status(201).json(saved);
   } catch (err) {
-    res.status(400).json({ message: err.message });
+    res.status(400).json({ error: err.message });
   }
 });
 
-// GET all ratings
-router.get('/', async (req, res) => {
+// GET - Get ratings for a specific location
+router.get('/:locationId', async (req, res) => {
   try {
-    const ratings = await Rating.find();
+    const ratings = await Rating.find({ locationId: req.params.locationId }).sort({ createdAt: -1 });
     res.json(ratings);
   } catch (err) {
-    res.status(500).json({ message: err.message });
+    res.status(500).json({ error: err.message });
   }
 });
 
