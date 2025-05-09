@@ -1,48 +1,56 @@
-// healthReviews.js
-
-// Sample initial data
 const defaultFacilities = [
-    { id: 'library', name: 'Library', reviews: [] },
-    { id: 'science-library', name: 'Science Library', reviews: [] },
-    { id: 'etec', name: 'ETEC', reviews: [] }
+    { id: 'library', name: 'Library' },
+    { id: 'science-library', name: 'Science Library' },
+    { id: 'etec', name: 'ETEC' }
 ];
 
-// Function to load initial data
-function loadInitialData() {
-    const stored = localStorage.getItem('studies');
-    if (!stored) {
-        localStorage.setItem('studies', JSON.stringify(defaultFacilities));
-    }
-    defaultFacilities.forEach(facility => showReviews(facility.id));
-}
+// Load initial data on page load
+window.onload = function() {
+    const facilities = ['library', 'science-library', 'etec'];
+    facilities.forEach(facility => showReviews(facility));
+};
 
-// Submit review
-function submitReview(facilityId) {
-    const name = document.getElementById(`user-name-${facilityId}`).value;
-    const comment = document.getElementById(`review-comment-${facilityId}`).value;
+// Submit review to the server
+async function submitReview(facilityId) {
+    const name = document.getElementById(`user-name-${facilityId}`).value.trim();
+    const comment = document.getElementById(`review-comment-${facilityId}`).value.trim();
     const rating = parseInt(document.getElementById(`review-rating-${facilityId}`).value);
 
     if (!name || !comment || isNaN(rating) || rating < 1 || rating > 5) {
-        alert("Please enter a name, comment, and rating between 1-5.");
+        alert("Please enter a valid name, comment, and rating between 1-5.");
         return;
     }
 
-    const review = { name, comment, rating };
-    saveReview(facilityId, review);
+    const review = { locationId: facilityId, name, comment, rating };
 
-    // Clear form
-    document.getElementById(`user-name-${facilityId}`).value = '';
-    document.getElementById(`review-comment-${facilityId}`).value = '';
-    document.getElementById(`review-rating-${facilityId}`).value = '';
+    // Send review to the server
+    const response = await fetch('/api/reviews', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(review)
+    });
 
-    // Refresh reviews
-    showReviews(facilityId);
-    hideReviewForm(facilityId);
+    if (response.ok) {
+        // Clear form
+        document.getElementById(`user-name-${facilityId}`).value = '';
+        document.getElementById(`review-comment-${facilityId}`).value = '';
+        document.getElementById(`review-rating-${facilityId}`).value = '';
+
+        // Refresh reviews
+        showReviews(facilityId);
+        hideReviewForm(facilityId);
+        alert("Thank you for your review!");
+    } else {
+        alert("Failed to submit review.");
+    }
 }
 
-// Display reviews and average rating
-function showReviews(facilityId) {
-    const reviews = getReviews(facilityId);
+// Display reviews from the server
+async function showReviews(facilityId) {
+    const response = await fetch(`/api/reviews/${facilityId}`);
+    const reviews = await response.json();
     const container = document.getElementById(`reviews-${facilityId}`);
     const ratingDisplay = document.getElementById(`rating-${facilityId}`);
 
@@ -57,43 +65,26 @@ function showReviews(facilityId) {
         total += review.rating;
         return `
             <div class="review">
-                <p><strong>${review.name}</strong></p>
+                <strong>${review.name}</strong>
                 <p>${review.comment}</p>
                 <p>Rating: ${review.rating}/5</p>
+                <p>Submitted on: ${new Date(review.createdAt).toLocaleString()}</p> <!-- Display creation date -->
                 <hr>
             </div>
         `;
-    }).join("");
+    }).join('');
 
-    const avg = (total / reviews.length).toFixed(1);
-    ratingDisplay.textContent = `Average Rating: ${avg}/5`;
-
+    const averageRating = (total / reviews.length).toFixed(1);
     container.innerHTML = reviewHTML;
+    ratingDisplay.textContent = `Average Rating: ${averageRating}/5`;
 }
 
-// Show form
+// Show review form
 function showReviewForm(facilityId) {
     document.getElementById(`review-form-${facilityId}`).style.display = 'block';
 }
 
-// Hide form
+// Hide review form
 function hideReviewForm(facilityId) {
     document.getElementById(`review-form-${facilityId}`).style.display = 'none';
-}
-
-// Retrieve reviews from localStorage
-function getReviews(facilityId) {
-    const facilities = JSON.parse(localStorage.getItem('studies')) || [];
-    const facility = facilities.find(f => f.id === facilityId);
-    return facility ? facility.reviews : [];
-}
-
-// Save review to localStorage
-function saveReview(facilityId, review) {
-    const facilities = JSON.parse(localStorage.getItem('studies')) || [];
-    const facility = facilities.find(f => f.id === facilityId);
-    if (facility) {
-        facility.reviews.push(review);
-        localStorage.setItem('studies', JSON.stringify(facilities));
-    }
 }

@@ -10,20 +10,22 @@ exports.getRatings = async (req, res) => {
     }
 };
 
-// Create a new rating
+
+
 exports.createRating = async (req, res) => {
-    const { location, rating, comment } = req.body;
+    const { locationId, name, rating, comment } = req.body;
 
     const newRating = new Rating({
-        location,
-        rating,
+        locationId,
+        name,
         comment,
+        rating,
     });
 
     try {
         const savedRating = await newRating.save();
-        res.status(201).json(savedRating);
+        res.status(201).json({ success: true, data: savedRating });
     } catch (error) {
-        res.status(400).json({ message: error.message });
+        res.status(400).json({ success: false, message: error.message });
     }
 };

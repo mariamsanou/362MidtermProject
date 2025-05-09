@@ -37,49 +37,105 @@
             </ul>
         </nav>
 
-        <h1>Leave a Review</h1>
+        <!-- Main Content -->
+        <div class="inner">
+            <h1>Leave a Review</h1>
 
-        <form id="reviewForm">
-            <!-- Category -->
-            <div class="form-group">
-                <label for="category">Choose a category:</label>
-                <select id="category" name="category" required>
-                    <option value="">-- Select Category --</option>
-                    <!-- Options will be populated dynamically -->
-                </select>
-            </div>
+            <section>
+                <form id="reviewForm">
+                  <div class="form-group">
+                    <label for="locationId">Location:</label>
+                    <select id="locationId" name="locationId" required>
+                      <option value="" disabled selected>-- Select Location --</option>
 
-            <!-- Specific location -->
-            <div class="form-group">
-                <label for="location">Choose a location:</label>
-                <select id="location" name="location" required>
-                    <option value="">-- Select Location --</option>
-                    <!-- Options will be populated dynamically -->
-                </select>
-            </div>
+                            <!-- Dining Locations (Corrected IDs) -->
+                            <option value="loc001">Dining: Jamal's</option>
+                            <option value="loc002">Dining: 518 Market</option>
+                            <option value="loc003">Dining: Al Dent</option>
+                            <option value="loc004">Dining: Calypso</option>
+                            <option value="loc005">Dining: Corner Deli</option>
+                            <option value="loc006">Dining: Baba's Pizza</option>
+                            <option value="loc007">Dining: Fountain Grill</option>
+                            <option value="loc008">Dining: NIKOS</option>
+                            <option value="loc009">Dining: UMAI SUSHI</option>
+                            <option value="loc010">Dining: Starbucks</option>
+                            <option value="loc011">Dining: Stocks and Stems</option>
+                            <option value="loc012">Dining: Subconnection</option>
+                            <option value="loc013">Dining: Halal Shack</option>
+                            <option value="loc014">Dining: 1844 Restaurant</option>
+                            <option value="loc015">Dining: Tres Habanero</option>
+                            <option value="loc016">Dining: Umai Fusion</option>
+                            <option value="loc017">Dining: Fresh Fruit Bar</option>
+                            <option value="loc018">Dining: Sweet Shop</option>
+                            <option value="loc019">Dining: East Cafe</option>
+                            <option value="loc020">Dining: Spice Market</option>
 
-            <!-- Star rating -->
-            <div class="form-group">
-                <label for="rating">Rating (1–5 stars):</label>
-                <select id="rating" name="rating" required>
-                    <option value="">-- Select Rating --</option>
-                    <option value="1">★☆☆☆☆</option>
-                    <option value="2">★★☆☆☆</option>
-                    <option value="3">★★★☆☆</option>
-                    <option value="4">★★★★☆</option>
-                    <option value="5">★★★★★</option>
-                </select>
-            </div>
+                            <!-- Academic Buildings (Corrected IDs) -->
+                            <option value="loc101">Academic: Lecture Center</option>
+                            <option value="loc102">Academic: Humanities Building</option>
+                            <option value="loc103">Academic: Physics</option>
+                            <option value="loc104">Academic: Arts & Sciences</option>
+                            <option value="loc105">Academic: Massary School of Business</option>
+                            <option value="loc106">Academic: Earth Science</option>
+                            <option value="loc107">Academic: Social Sciences</option>
+                            <option value="loc108">Academic: ETEC</option>
+                            <option value="loc109">Academic: Taconic</option>
+                            <option value="loc110">Academic: Fine Arts</option>
+                            <option value="loc111">Academic: Catskill</option>
+                            <option value="loc112">Academic: Pine Bush</option>
+                            <option value="loc113">Academic: Biology</option>
+                            <option value="loc114">Academic: Performing Arts</option>
+                            <option value="loc115">Academic: Chemistry</option>
+                            <option value="loc116">Academic: Physical Education</option>
+                            <option value="loc117">Academic: Life Science</option>
 
-            <!-- Review text -->
-            <div class="form-group">
-                <label for="review">Your review:</label>
-                <textarea id="review" name="review" placeholder="Write your thoughts here..." required></textarea>
-            </div>
+                            <!-- Study Locations (Corrected IDs) -->
+                            <option value="loc301">Study: Main Library</option>
+                            <option value="loc302">Study: Science Library</option>
+                            <option value="loc303">Study: Campus Center Lounge</option>
+                            <option value="loc304">Study: Humanities Study Nook</option>
+                            <option value="loc305">Study: ETEC</option>
 
-            <!-- Submit -->
-            <input type="submit" value="Submit Review" />
-        </form>
+
+                            <!-- Bathrooms -->
+                            <option value="loc201">Bathroom: Campus Center - 1st Floor</option>
+                            <option value="loc202">Bathroom: Campus Center - 2nd Floor</option>
+                            <option value="loc204">Bathroom: Academic Buildings</option>
+                            <option value="loc205">Bathroom: ETEC</option>
+
+                            <!-- Event Locations -->
+                            <option value="loc401">Event: Performing Arts Center</option>
+                            <option value="loc402">Event: Lecture Center</option>
+                            <option value="loc403">Event: Campus Center Ballroom</option>
+                            <option value="loc405">Event: The Podium</option>
+                          
+                            <!-- Health and Fitness -->
+                    
+                            <option value="loc501">Fitness: The Well on Colonial</option>
+                            <option value="loc502">Health: Broadview Center</option>
+                          </select>
+                            </div>
+
+                            <div class="form-group">
+                            <label for="name">Your Name:</label>
+                            <input type="text" id="name" name="name" required />
+                            </div>
+
+                            <div class="form-group">
+                            <label for="rating">Rating (1–5):</label>
+                            <input type="number" id="rating" name="rating" min="1" max="5" required />
+                            </div>
+
+                            <div class="form-group">
+                            <label for="comment">Comment:</label>
+                            <textarea id="comment" name="comment" required></textarea>
+                            </div>
+
+                            <button type="submit">Submit</button>
+                        </form>
+                <div id="reviews-etec"></div>
+            </section>
+        </div>
     </div>
 
     <!-- Scripts -->
@@ -88,55 +144,9 @@
     <script src="js/breakpoints.min.js"></script>
     <script src="js/util.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/restaurants.js"></script>
-    <script src="js/reviews.js"></script>
-    <script src="submitReview.js"></script>
-    <script src="js/showReviewForm.js"></script>
-    <script src="js/choosereview.js"></script>
+    <script src="js/reviewForm.js"></script>
 
-    <script>
-        // Handle form submission
-        document.getElementById('reviewForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent the default form submission
 
-            // Collect form data
-            const category = document.getElementById('category').value;
-            const location = document.getElementById('location').value;
-            const rating = document.getElementById('rating').value;
-            const reviewText = document.getElementById('review').value;
-
-            // Validate that all fields are filled
-            if (!category || !location || !rating || !reviewText) {
-                alert("Please fill in all fields before submitting your review.");
-                return;
-            }
-
-            // Create a review object
-            const review = {
-                category: category,
-                location: location,
-                rating: parseInt(rating),
-                review: reviewText
-            };
-
-            // Call the function to submit the review (you need to implement this function)
-            submitReview(review);
-
-            // Clear the form after submission
-            document.getElementById('reviewForm').reset();
-            alert("Thank you for your review!");
-        });
-
-        // Function to submit the review (you need to implement this)
-        function submitReview(review) {
-            // Here you can implement the logic to save the review
-            // For example, you could send it to a server or save it in local storage
-            console.log("Review submitted:", review);
-            // Example: Save to local storage
-            let reviews = JSON.parse(localStorage.getItem('reviews')) || [];
-            reviews.push(review);
-            localStorage.setItem('reviews', JSON.stringify(reviews));
-        }
-    </script>
+    
 </body>
 </html>

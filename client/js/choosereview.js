@@ -22,7 +22,6 @@ const locationSelect = document.getElementById('location');
 
     document.getElementById('reviewForm').addEventListener('submit', function(e) {
       e.preventDefault();
-      // You could save to a database or display a success message
       alert('Review submitted! 🎉');
       this.reset();
     });
